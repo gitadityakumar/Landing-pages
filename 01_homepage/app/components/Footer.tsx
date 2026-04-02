@@ -10,7 +10,7 @@ export function Footer() {
         {/* CTA Box with Abstract Background */}
         <div className="relative w-full rounded-2xl overflow-hidden py-24 md:py-32 lg:py-40 flex flex-col items-center justify-center text-center px-4">
           <div className="absolute inset-0 z-0">
-             <Image src="/abstract.png" alt="abstract background" fill sizes="100vw" className="object-cover opacity-80" />
+             <Image src="/abstract.png" alt="abstract background" fill sizes="100vw" priority className="object-cover opacity-80" />
              <div className="absolute inset-0 bg-black/40"></div>
           </div>
           
