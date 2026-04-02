@@ -30,7 +30,7 @@ export function Team() {
         <div className="flex-1 grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4 lg:gap-6 lg:pl-10">
            {team.slice(0,2).map((member, i) => (
               <div key={i} className="group relative rounded-2xl overflow-hidden aspect-4/5 bg-[#111]">
-                 <Image src={member.img} alt={member.name} fill className="object-cover grayscale group-hover:grayscale-0 transition-all duration-500 opacity-90 group-hover:opacity-100" />
+                 <Image src={member.img} alt={member.name} fill sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw" className="object-cover grayscale group-hover:grayscale-0 transition-all duration-500 opacity-90 group-hover:opacity-100" />
                  <div className="absolute inset-x-0 bottom-0 bg-black/90 p-4 pt-5 translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
                     <h4 className="font-semibold text-sm">{member.name}</h4>
                     <p className="text-xs text-gray-500 mt-1">{member.title}</p>
@@ -45,7 +45,7 @@ export function Team() {
       <div className="w-full mt-6 grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 lg:gap-6">
           {team.slice(2, 6).map((member, i) => (
              <div key={i} className="group relative rounded-2xl overflow-hidden aspect-4/5 bg-[#111]">
-                 <Image src={member.img} alt={member.name} fill className="object-cover grayscale group-hover:grayscale-0 transition-all duration-500 opacity-90 group-hover:opacity-100" />
+                 <Image src={member.img} alt={member.name} fill sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw" className="object-cover grayscale group-hover:grayscale-0 transition-all duration-500 opacity-90 group-hover:opacity-100" />
                  <div className="absolute inset-x-0 bottom-0 bg-black/90 p-4 border-t border-gray-800/60 translate-y-1 group-hover:translate-y-0 transition-transform duration-300">
                     <h4 className="font-semibold text-[13px] md:text-[14px]">{member.name}</h4>
                     <p className="text-[11px] md:text-[12px] text-gray-500 mt-1 uppercase tracking-wide">{member.title}</p>

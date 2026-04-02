@@ -23,7 +23,7 @@ export function Services() {
               <div className="flex items-center gap-6 md:gap-12">
                  {/* Image Pill */}
                  <div className="w-[120px] md:w-[160px] h-[36px] md:h-[44px] rounded-full overflow-hidden relative opacity-70 group-hover:opacity-100 transition-opacity duration-300">
-                    <Image src={service.img} alt={service.name} fill className="object-cover" />
+                    <Image src={service.img} alt={service.name} fill sizes="(max-width: 768px) 120px, 160px" className="object-cover" />
                  </div>
                  {/* Title */}
                  <h3 className="text-2xl md:text-[40px] font-semibold text-white tracking-tight group-hover:translate-x-3 transition-transform duration-500">{service.name}</h3>

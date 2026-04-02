@@ -5,8 +5,8 @@ export function Works() {
   const works = [
     { title: "Galaxia Branding", img: "https://images.unsplash.com/photo-1541701494587-cb58502866ab?q=80&w=2670&auto=format&fit=crop" },
     { title: "John Mayer NYC", img: "https://images.unsplash.com/photo-1550684848-fac1c5b4e853?q=80&w=2670&auto=format&fit=crop" },
-    { title: "Nayzak Patterns", img: "https://images.unsplash.com/photo-1456086272160-b223648611ce?q=80&w=2574&auto=format&fit=crop" },
-    { title: "Crave Chips", img: "https://images.unsplash.com/photo-1563514217112-985060f0970a?q=80&w=2574&auto=format&fit=crop" } // using a 3d shapes or abstract geometry photo from unsplash
+    { title: "Nayzak Patterns", img: "https://images.unsplash.com/photo-1620641788421-7a1c342ea42e?q=80&w=2574&auto=format&fit=crop" },
+    { title: "Crave Chips", img: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=2574&auto=format&fit=crop" }
   ];
 
   return (
@@ -24,6 +24,7 @@ export function Works() {
                 src={work.img} 
                 alt={work.title} 
                 fill 
+                sizes="(max-width: 768px) 100vw, 50vw"
                 className="object-cover transition-transform duration-700 group-hover:scale-105"
               />
             </div>
