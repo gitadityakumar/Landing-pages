@@ -6,7 +6,7 @@ A beautifully responsive, high-fidelity dark mode landing page built with **Next
 
 Here is the exact pixel-perfect implementation of the required design grid and layout:
 
-![Full Landing Page Screenshot](./public/full-page-screenshot.png)
+![Full Landing Page Screenshot](./public/fullscreenshot.png)
 
 ## 🚀 Features
 - **Responsive Layout**: Adheres to a strict component lifecycle and grid boundaries across all viewports (`px-4`, `md:px-8`, `max-w-[1500px]`).
