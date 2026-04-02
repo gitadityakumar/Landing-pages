@@ -59,7 +59,7 @@ export function Footer() {
           <div className="w-full flex flex-col md:flex-row items-stretch min-h-[60px] text-[11px] font-medium text-gray-500/80">
             {/* Services */}
             <div className="w-full md:w-[200px] lg:w-[280px] shrink-0 border-b md:border-b-0 md:border-r border-gray-800/60 flex items-center justify-center">
-              <Link href="#" className="flex justify-center items-center gap-2 hover:text-white transition-colors uppercase tracking-widest py-4 md:py-0">
+              <Link href="#" className="hidden md:flex justify-center items-center gap-2 hover:text-white transition-colors uppercase tracking-widest py-4 md:py-0">
                 <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M17 3a2.85 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5Z"/></svg>
                 Services
               </Link>

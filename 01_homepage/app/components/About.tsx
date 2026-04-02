@@ -3,7 +3,7 @@ import { Aperture, Circle, Box, LayoutTemplate } from "lucide-react";
 export function About() {
   return (
     <section className="px-4 md:px-8 py-20 pb-32 max-w-[1500px] mx-auto">
-      <div className="flex flex-col lg:flex-row justify-between lg:items-start gap-16 lg:gap-32">
+      <div className="flex flex-col lg:flex-row justify-between lg:items-start gap-16 lg:gap-32 w-full">
         {/* Left Content */}
         <div className="flex-1 max-w-[800px]">
           <p className="text-[22px] md:text-[28px] lg:text-[34px] font-medium leading-[1.3] tracking-tight text-[#f6f6f6]">

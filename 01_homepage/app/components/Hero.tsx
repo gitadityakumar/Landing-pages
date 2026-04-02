@@ -1,6 +1,6 @@
 export function Hero() {
   return (
-    <section className="pt-24 pb-32 px-4 md:px-8 max-w-[1500px] mx-auto flex flex-col items-center">
+    <section className="pt-24 pb-32 px-4 md:px-8 max-w-[1500px] mx-auto flex flex-col items-center z-10 relative">
       <h1 className="text-5xl md:text-7xl lg:text-[110px] font-bold text-center leading-[0.95] tracking-[-0.03em] max-w-[900px] mb-20 text-[#f6f6f6]">
         Krate design and<br/>motion studio
       </h1>
@@ -10,14 +10,18 @@ export function Hero() {
         {[0, 1, 2, 3, 4, 5, 6, 7, 8].map((i) => (
           <div 
             key={i} 
-            className="flex-1 h-full rounded-full bg-gray-900 border border-white/5 opacity-90 shadow-2xl transition-transform hover:scale-[1.02] duration-500"
-            style={{
-              background: 'url(/abstract.png)',
-              backgroundSize: '100% 100%',
-              backgroundPosition: `calc(${i} * 12.5%) center`,
-              backgroundRepeat: 'no-repeat',
-            }}
-          />
+            className="flex-1 h-full rounded-full bg-gray-900 border border-white/5 opacity-90 shadow-2xl transition-transform hover:scale-[1.02] duration-500 overflow-hidden relative"
+          >
+            <div 
+              className="absolute inset-0"
+              style={{
+                backgroundImage: 'url(/abstract.png)',
+                backgroundSize: '900% 100%',
+                backgroundPosition: `${i * (100/8)}% center`,
+                backgroundRepeat: 'no-repeat',
+              }}
+            />
+          </div>
         ))}
       </div>
     </section>
