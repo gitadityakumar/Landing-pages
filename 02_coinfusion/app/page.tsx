@@ -1,312 +1,348 @@
-
 import Image from "next/image";
 
-const marketStats = [
-  { label: "Users onboarded", value: "120K+" },
-  { label: "Assets supported", value: "240+" },
-  { label: "Daily volume", value: "$84M" },
+const heroChips = [
+  { title: "Limited Bitcoin view", value: "Fast market snapshots" },
+  { title: "BTC apps", value: "Curated ecosystem flows" },
+  { title: "Proof of transfer", value: "Secured settlement" },
+  { title: "Bitcoin rewards", value: "Native yield paths" },
 ];
 
-const features = [
-  {
-    title: "Swap faster",
-    copy:
-      "Move between top assets with a clean flow, transparent pricing, and live market visibility.",
-  },
-  {
-    title: "Track everything",
-    copy:
-      "Monitor balances, market movements, and portfolio health in one compact command center.",
-  },
-  {
-    title: "Secure by default",
-    copy:
-      "Biometric access, encrypted wallet actions, and transaction review built into every step.",
-  },
+const stackCards = [
+  "Proof of transfer",
+  "Bitcoin to NFTs",
+  "Bitcoin to DeFi",
 ];
 
-const highlights = [
-  "Cross-chain wallet experience",
-  "Institutional-grade security flows",
-  "Real-time pricing and portfolio sync",
-  "Built for phone-first investing",
+const buildChips = [
+  "Apps",
+  "Protocols",
+  "Tooling",
+  "Infrastructure",
 ];
 
-const securityNotes = [
-  "Biometric confirmation for sensitive actions",
-  "Cold-wallet friendly transfer review",
-  "Fraud-aware activity monitoring",
+const exploreTabs = [
+  "All apps",
+  "DeFi",
+  "NFT",
+  "Wallets",
+  "Learning resources",
+  "Smart tools",
+  "Bitcoin-secured",
 ];
 
 export default function Home() {
   return (
-    <main className="min-h-screen overflow-x-hidden bg-background text-foreground">
-      <div className="relative isolate">
-        <div className="absolute inset-x-0 top-0 -z-10 h-144 bg-[radial-gradient(circle_at_top_left,rgba(87,70,255,0.48),transparent_45%),radial-gradient(circle_at_top_right,rgba(255,196,77,0.18),transparent_30%),linear-gradient(180deg,rgba(17,12,46,0.95),rgba(5,3,22,1))]" />
-        <div className="absolute left-1/2 top-24 -z-10 h-64 w-64 -translate-x-1/2 rounded-full bg-accent/20 blur-3xl" />
-
-        <section className="mx-auto max-w-7xl px-5 pb-14 pt-5 sm:px-8 lg:px-10">
-          <header className="flex items-center justify-between gap-3 rounded-full border border-white/10 bg-white/5 px-3 py-3 backdrop-blur sm:px-4 md:px-6">
-            <div className="flex min-w-0 items-center gap-3">
-              <div className="grid h-11 w-11 shrink-0 place-items-center rounded-full border border-accent/50 bg-accent/15 text-lg font-bold">
-                CF
-              </div>
-              <div className="min-w-0">
-                <p className="truncate text-base font-semibold tracking-tight sm:text-lg">
-                  CoinFusion
-                </p>
-                <p className="hidden text-xs text-muted sm:block">
-                  Future-ready crypto wallet
-                </p>
-              </div>
-            </div>
-
-            <nav className="hidden items-center gap-8 text-sm text-white/78 md:flex">
-              <a href="#features">Features</a>
-              <a href="#markets">Markets</a>
-              <a href="#security">Security</a>
-            </nav>
-
+    <main className="bg-[#f4f3ef] text-[#111111]">
+      <div className="mx-auto flex w-full max-w-[1180px] flex-col gap-12 px-3 py-3 sm:px-4 sm:py-4 lg:gap-16">
+        <section className="overflow-hidden rounded-[28px] bg-[#050505] px-5 pb-8 pt-5 text-white sm:rounded-[34px] sm:px-8 sm:pb-10 lg:px-12 lg:pb-12">
+          <div className="mx-auto inline-flex rounded-full border border-white/10 bg-white/6 px-4 py-2 text-[11px] text-white/75 shadow-[inset_0_1px_0_rgba(255,255,255,0.08)] sm:px-6">
             <div className="flex items-center gap-3">
+              <span>Explore</span>
+              <span className="text-white/25">|</span>
+              <span>Stacks</span>
+              <span className="text-white/25">|</span>
+              <span>Apps</span>
+              <span className="text-white/25">|</span>
+              <span>Community</span>
+            </div>
+          </div>
+
+          <div className="relative mt-14 text-center sm:mt-20">
+            <div className="absolute left-1/2 top-1/2 -z-10 h-56 w-56 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#5137ff]/25 blur-3xl sm:h-72 sm:w-72" />
+            <h1 className="mx-auto max-w-[11ch] text-5xl font-semibold leading-[0.96] tracking-[-0.06em] text-balance sm:text-6xl lg:text-[78px]">
+              Unleash Bitcoin full potential
+            </h1>
+            <p className="mx-auto mt-5 max-w-xl text-sm leading-7 text-white/58 sm:text-base">
+              A modern Stacks-inspired landing page for exploring apps, rewards,
+              and Bitcoin-secured experiences.
+            </p>
+            <div className="mt-7 flex justify-center">
               <a
-                href="#markets"
-                className="hidden rounded-full border border-white/12 px-5 py-3 text-sm text-white/80 transition hover:border-white/30 hover:text-white md:inline-flex"
+                href="#stacking"
+                className="inline-flex rounded-full bg-[linear-gradient(135deg,#5b45ff,#7a6cff)] px-6 py-3 text-sm font-semibold shadow-[0_14px_40px_rgba(91,69,255,0.45)] transition hover:translate-y-[-1px]"
               >
-                View Markets
-              </a>
-              <a
-                href="#download"
-                className="inline-flex h-10 w-[5.75rem] shrink-0 min-w-0 items-center justify-center rounded-full bg-white px-3 py-3 text-sm font-semibold text-[#09051D] transition hover:scale-[0.98] sm:h-auto sm:w-auto sm:px-5"
-              >
-                <span className="sm:hidden">Get App</span>
-                <span className="hidden sm:inline">Download App</span>
+                Start building
               </a>
             </div>
-          </header>
+          </div>
 
-          <div className="grid items-center gap-12 pb-8 pt-14 lg:grid-cols-[1.04fr_0.96fr] lg:pt-20">
-            <div className="max-w-2xl">
-              <div className="inline-flex items-center gap-2 rounded-full border border-[#6a59ff]/40 bg-[#100b30] px-4 py-2 text-sm text-white/82 shadow-[0_0_0_1px_rgba(255,255,255,0.03)]">
-                <span className="h-2 w-2 rounded-full bg-accent-2" />
-                Trusted by modern crypto investors
+          <div className="mt-16 grid gap-3 sm:grid-cols-2 lg:mt-24 lg:grid-cols-4">
+            {heroChips.map((chip, index) => (
+              <div
+                key={chip.title}
+                className="rounded-[24px] border border-white/10 bg-[linear-gradient(180deg,rgba(255,255,255,0.06),rgba(255,255,255,0.03))] p-4 shadow-[inset_0_1px_0_rgba(255,255,255,0.05)]"
+              >
+                <div className="flex items-center gap-3">
+                  <div className="grid h-8 w-8 place-items-center rounded-full bg-[#1a1a1a] text-xs font-semibold text-[#ffc43a]">
+                    {index + 1}
+                  </div>
+                  <div>
+                    <p className="text-sm font-medium">{chip.title}</p>
+                    <p className="mt-1 text-xs text-white/45">{chip.value}</p>
+                  </div>
+                </div>
               </div>
+            ))}
+          </div>
+        </section>
 
-              <h1 className="mt-6 text-5xl font-semibold leading-none tracking-[-0.05em] text-balance sm:text-6xl lg:text-7xl">
-                Seamless wealth
-                <span className="block bg-[linear-gradient(135deg,#ffffff_10%,#b4aaff_45%,#ffc44d_100%)] bg-clip-text text-transparent">
-                  across every chain
-                </span>
-              </h1>
-
-              <p className="mt-6 max-w-xl text-base leading-8 text-white/70 sm:text-lg">
-                CoinFusion gives traders and long-term holders a cleaner way to
-                store, move, and grow digital assets with live insight, compact
-                controls, and security that stays invisible until you need it.
+        <section
+          id="stacking"
+          className="rounded-[28px] bg-[#f4f3ef] px-3 py-2 sm:px-4 lg:px-6"
+        >
+          <div className="grid items-center gap-10 lg:grid-cols-[0.92fr_1.08fr]">
+            <div className="max-w-md">
+              <p className="text-xs uppercase tracking-[0.26em] text-[#7b7b7b]">
+                Bitcoin rewards
               </p>
-
-              <div className="mt-8 flex flex-col gap-4 sm:flex-row">
-                <a
-                  id="download"
-                  href="#download"
-                  className="inline-flex items-center justify-center rounded-full bg-[linear-gradient(135deg,#5746ff,#7e71ff)] px-7 py-4 text-sm font-semibold text-white shadow-[0_20px_70px_rgba(87,70,255,0.42)] transition hover:-translate-y-px"
-                >
-                  Start Investing
-                </a>
-                <a
-                  href="#features"
-                  className="inline-flex items-center justify-center rounded-full border border-white/12 bg-white/5 px-7 py-4 text-sm font-semibold text-white/82 transition hover:border-white/28 hover:bg-white/8"
-                >
-                  Explore Platform
-                </a>
-              </div>
-
-              <div className="mt-10 grid gap-4 sm:grid-cols-3">
-                {marketStats.map((stat) => (
-                  <div
-                    key={stat.label}
-                    className="rounded-[28px] border border-white/10 bg-white/5 px-5 py-5 backdrop-blur"
-                  >
-                    <p className="text-2xl font-semibold tracking-[-0.04em]">
-                      {stat.value}
-                    </p>
-                    <p className="mt-2 text-sm text-white/55">{stat.label}</p>
-                  </div>
-                ))}
-              </div>
+              <h2 className="mt-4 text-4xl font-semibold leading-[0.96] tracking-[-0.06em] text-[#121212] sm:text-5xl">
+                Stacking, a new way to earn bitcoin
+              </h2>
+              <p className="mt-5 text-sm leading-7 text-[#616161] sm:text-base">
+                Access yield-like participation secured by Bitcoin finality and
+                purpose-built for the Stacks ecosystem.
+              </p>
+              <a
+                href="#explore"
+                className="mt-7 inline-flex rounded-full bg-[linear-gradient(135deg,#5b45ff,#7a6cff)] px-5 py-3 text-sm font-semibold text-white shadow-[0_14px_40px_rgba(91,69,255,0.25)]"
+              >
+                Learn stacking
+              </a>
             </div>
 
-            <div className="relative mx-auto w-full max-w-152">
-              <div className="absolute inset-x-8 top-1/2 -z-10 h-44 -translate-y-1/2 rounded-full bg-accent/35 blur-3xl" />
-              <div className="absolute right-2 top-8 hidden rounded-full border border-white/10 bg-[#0f0a2b]/90 px-4 py-3 text-sm text-white/75 shadow-[0_18px_60px_rgba(0,0,0,0.28)] sm:block">
-                Live BTC movement
-                <span className="mt-1 block text-xl font-semibold text-white">
-                  +12.84%
-                </span>
+            <div className="relative min-h-[240px] rounded-[32px] bg-transparent">
+              <div className="absolute left-[6%] top-[8%] rounded-full border border-[#dbd7cf] bg-white px-4 py-2 text-sm font-semibold text-[#555] shadow-sm">
+                9.5%
+              </div>
+              <div className="absolute left-[50%] top-[6%] h-11 w-11 rounded-full border-4 border-[#1f1f1f] bg-[radial-gradient(circle_at_35%_35%,#ffe894,#d2a10a)] shadow-md" />
+              <div className="absolute left-[25%] top-[30%] rounded-full bg-[linear-gradient(135deg,#6c56ff,#7b67ff)] px-7 py-4 text-2xl font-semibold tracking-[-0.05em] text-white shadow-[0_16px_35px_rgba(91,69,255,0.22)] sm:text-[34px]">
+                $864,890,126
+              </div>
+              <div className="absolute left-[47%] top-[58%] grid h-12 w-12 place-items-center rounded-full bg-[linear-gradient(135deg,#5b45ff,#7a6cff)] text-2xl text-white shadow-[0_14px_35px_rgba(91,69,255,0.25)]">
+                +
+              </div>
+              <div className="absolute right-[3%] top-[46%] rounded-[22px] border border-[#ddd8cf] bg-white px-4 py-3 text-right shadow-sm">
+                <p className="text-[11px] uppercase tracking-[0.18em] text-[#8d8d8d]">
+                  New stacking
+                </p>
+                <p className="mt-1 text-sm font-semibold text-[#1c1c1c]">
+                  Earn bitcoin yield
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div className="mt-16 text-center">
+            <h3 className="text-3xl font-semibold leading-tight tracking-[-0.05em] sm:text-4xl">
+              Stacks unleashed
+              <span className="block">Bitcoin</span>
+            </h3>
+
+            <div className="mt-10 grid gap-4 md:grid-cols-3">
+              {stackCards.map((card, index) => (
+                <article
+                  key={card}
+                  className="rounded-[14px] border border-[#e5e1d8] bg-[#efefed] p-5 text-left"
+                >
+                  <div className="grid h-8 w-8 place-items-center rounded-full bg-[linear-gradient(135deg,#5b45ff,#7a6cff)] text-xs font-semibold text-white">
+                    {index + 1}
+                  </div>
+                  <p className="mt-16 max-w-[10ch] text-2xl font-medium leading-tight tracking-[-0.05em] text-[#111111]">
+                    {card}
+                  </p>
+                </article>
+              ))}
+            </div>
+
+            <p className="mt-8 text-[11px] uppercase tracking-[0.28em] text-[#8a8a8a]">
+              Built on Bitcoin
+            </p>
+          </div>
+        </section>
+
+        <section className="overflow-hidden rounded-[28px] bg-[#080808] px-5 py-8 text-white sm:rounded-[34px] sm:px-8 lg:px-12 lg:py-12">
+          <div className="grid items-center gap-10 lg:grid-cols-[0.84fr_1.16fr]">
+            <div>
+              <p className="text-xs uppercase tracking-[0.26em] text-white/38">
+                App layer
+              </p>
+              <h2 className="mt-4 max-w-[10ch] text-4xl font-semibold leading-[0.96] tracking-[-0.06em] sm:text-5xl lg:text-[58px]">
+                Build powerful apps, secured by bitcoin
+              </h2>
+              <p className="mt-5 max-w-md text-sm leading-7 text-white/58 sm:text-base">
+                Design applications around Bitcoin’s security guarantees while
+                keeping UX modern, fluid, and accessible.
+              </p>
+              <a
+                href="#explore"
+                className="mt-7 inline-flex rounded-full bg-[linear-gradient(135deg,#5b45ff,#7a6cff)] px-5 py-3 text-sm font-semibold"
+              >
+                Launch faster
+              </a>
+            </div>
+
+            <div className="grid items-center gap-6 md:grid-cols-[0.7fr_1.3fr]">
+              <div className="mx-auto w-full max-w-[220px]">
+                <div className="rounded-[36px] bg-[linear-gradient(180deg,#5f47ff,#4830ea)] p-5 shadow-[0_30px_80px_rgba(91,69,255,0.28)]">
+                  <div className="grid h-28 place-items-center rounded-[28px] border border-white/12 bg-white/8">
+                    <div className="grid h-16 w-16 place-items-center rounded-full bg-white text-3xl text-[#5f47ff]">
+                      🔒
+                    </div>
+                  </div>
+                  <div className="mt-5 flex justify-center">
+                    <div className="h-2 w-20 rounded-full bg-white/80" />
+                  </div>
+                </div>
               </div>
 
-              <div className="relative rounded-[2rem] border border-white/10 bg-[linear-gradient(180deg,rgba(21,16,54,0.95),rgba(9,7,27,0.98))] p-4 shadow-[0_28px_100px_rgba(0,0,0,0.45)] sm:p-6">
-                <div className="grid gap-4 rounded-[1.75rem] border border-white/8 bg-[linear-gradient(180deg,rgba(255,255,255,0.04),rgba(255,255,255,0.01))] p-4 sm:p-5">
-                  <div className="flex items-center justify-between rounded-[1.4rem] border border-white/8 bg-black/20 px-4 py-4">
+              <div className="relative mx-auto w-full max-w-[420px]">
+                <div className="absolute right-4 top-2 h-32 w-32 rounded-full bg-[#f7b925]/14 blur-3xl" />
+                <div className="rounded-[38px] border border-white/10 bg-[linear-gradient(180deg,#1a1a1a,#101010)] p-5">
+                  <div className="flex items-start justify-between">
                     <div>
-                      <p className="text-xs uppercase tracking-[0.24em] text-white/45">
-                        Portfolio Balance
+                      <p className="text-xs uppercase tracking-[0.22em] text-white/36">
+                        Secure wallet
                       </p>
-                      <p className="mt-2 text-3xl font-semibold tracking-[-0.05em]">
-                        $248,430
+                      <p className="mt-2 text-lg font-medium text-white/85">
+                        Bitcoin-secured experience
                       </p>
                     </div>
-                    <div className="rounded-full bg-[#1e174d] px-4 py-2 text-sm font-medium text-[#d5d0ff]">
-                      +8.21%
+                    <div className="grid h-10 w-10 place-items-center rounded-full bg-[#f7b925] text-black">
+                      ₿
                     </div>
                   </div>
 
-                  <div className="grid gap-4 lg:grid-cols-[0.96fr_1.04fr]">
-                    <div className="relative min-h-[28rem] overflow-hidden rounded-[2rem] border border-white/8 bg-[radial-gradient(circle_at_top,_rgba(255,196,77,0.12),transparent_30%),linear-gradient(180deg,#131033,#0b081f)] p-4">
-                      <div className="absolute left-4 top-4 rounded-full border border-[#5546ff] bg-[#120d32]/90 px-4 py-2 text-xs text-white/75">
-                        Wallet Preview
-                      </div>
-                      <Image
-                        src="/mask2.svg"
-                        alt="CoinFusion mobile app mockup"
-                        width={265}
-                        height={441}
-                        className="mx-auto mt-12 w-[78%] max-w-[18rem]"
-                        priority
-                      />
-                    </div>
-
-                    <div className="grid gap-4">
-                      <div className="rounded-[1.7rem] border border-white/8 bg-[#120d31] p-5">
-                        <div className="flex items-center justify-between">
-                          <div>
-                            <p className="text-sm text-white/50">Top asset</p>
-                            <p className="mt-1 text-xl font-semibold">Bitcoin</p>
-                          </div>
-                          <div className="relative h-14 w-14 overflow-hidden rounded-full border border-white/10">
-                            <Image
-                              src="/yen.svg"
-                              alt="Bitcoin coin graphic"
-                              fill
-                              className="object-cover"
-                            />
-                          </div>
-                        </div>
-                        <div className="mt-5 flex items-end justify-between">
-                          <p className="text-3xl font-semibold tracking-[-0.04em]">
-                            $61,940
-                          </p>
-                          <p className="text-sm font-medium text-[#ffc44d]">
-                            +6.12% today
-                          </p>
-                        </div>
-                      </div>
-
-                      <div className="overflow-hidden rounded-[1.7rem] border border-white/8 bg-[linear-gradient(135deg,#5a47ff,#2f1da8)] p-5">
-                        <p className="text-sm text-white/70">Private vault</p>
-                        <p className="mt-2 max-w-xs text-2xl font-semibold leading-tight tracking-[-0.04em]">
-                          Security designed to stay one step ahead.
-                        </p>
-                        <div className="relative mt-5 h-40 sm:h-44">
-                          <Image
-                            src="/Mask group.svg"
-                            alt="Abstract security icon"
-                            fill
-                            className="object-contain object-right-bottom"
-                          />
-                        </div>
-                      </div>
-                    </div>
+                  <div className="mt-6 flex items-end justify-center">
+                    <Image
+                      src="/mask2.svg"
+                      alt="Secure bitcoin app preview"
+                      width={265}
+                      height={441}
+                      className="h-auto w-full max-w-[260px]"
+                    />
                   </div>
+                </div>
+              </div>
+            </div>
+          </div>
 
-                  <div className="grid gap-3 rounded-[1.6rem] border border-white/8 bg-black/20 p-4 sm:grid-cols-2">
-                    {highlights.map((item) => (
-                      <div
-                        key={item}
-                        className="rounded-[1.2rem] border border-white/8 bg-white/5 px-4 py-4 text-sm text-white/70"
-                      >
-                        {item}
-                      </div>
-                    ))}
-                  </div>
+          <div className="mt-14">
+            <h3 className="text-3xl font-semibold tracking-[-0.05em] sm:text-4xl">
+              See what
+              <span className="block">being built</span>
+            </h3>
+            <div className="mt-8 grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
+              {buildChips.map((chip) => (
+                <div
+                  key={chip}
+                  className="rounded-[22px] border border-white/10 bg-white/5 px-4 py-4 text-sm text-white/76"
+                >
+                  {chip}
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="grid items-center gap-10 rounded-[28px] bg-[#f4f3ef] px-3 py-2 sm:px-4 lg:grid-cols-[0.92fr_1.08fr] lg:px-6">
+          <div className="max-w-xl">
+            <p className="text-sm leading-7 text-[#555555]">
+              Bitcoin secures a simpler, safer, and more expressive development
+              network. Build what matters, move with confidence, and keep the
+              product anchored to the world’s most credible chain.
+            </p>
+            <a
+              href="#explore"
+              className="mt-5 inline-flex text-sm font-semibold text-[#5b45ff]"
+            >
+              Learn about the world →
+            </a>
+          </div>
+
+          <div className="flex items-end justify-center gap-4 sm:gap-8">
+            <Image
+              src="/mask2.svg"
+              alt="Compact wallet preview"
+              width={170}
+              height={280}
+              className="h-auto w-[128px] sm:w-[160px]"
+            />
+            <Image
+              src="/Mask group.svg"
+              alt="Stacks abstract emblem"
+              width={210}
+              height={320}
+              className="h-auto w-[155px] sm:w-[195px]"
+            />
+          </div>
+        </section>
+
+        <section
+          id="explore"
+          className="overflow-hidden rounded-[28px] bg-[#080808] px-5 py-8 text-white sm:rounded-[34px] sm:px-8 lg:px-12 lg:py-12"
+        >
+          <h2 className="text-4xl font-semibold tracking-[-0.06em] sm:text-5xl">
+            Explore Stacks
+          </h2>
+
+          <div className="mt-8 flex flex-wrap gap-2">
+            {exploreTabs.map((tab, index) => (
+              <div
+                key={tab}
+                className={`rounded-full border px-4 py-2 text-sm ${
+                  index === 0
+                    ? "border-white/20 bg-white text-black"
+                    : "border-white/10 bg-white/6 text-white/72"
+                }`}
+              >
+                {tab}
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-10 h-px bg-white/10" />
+
+          <div className="mt-12 grid gap-8 lg:grid-cols-[0.9fr_1.1fr]">
+            <div>
+              <p className="text-xs uppercase tracking-[0.26em] text-white/35">
+                Ecosystem overview
+              </p>
+              <p className="mt-5 max-w-md text-sm leading-7 text-white/56 sm:text-base">
+                Discover apps, infrastructure, and learning paths built for a
+                Bitcoin-secured internet. The section is intentionally restrained
+                to mirror the minimal footer treatment in the supplied design.
+              </p>
+              <a
+                href="#"
+                className="mt-7 inline-flex text-sm font-semibold text-[#6b59ff]"
+              >
+                Browse ecosystem
+              </a>
+            </div>
+
+            <div className="rounded-[24px] border border-white/10 bg-[linear-gradient(180deg,rgba(255,255,255,0.03),rgba(255,255,255,0.01))] p-5">
+              <div className="grid gap-3 sm:grid-cols-2">
+                <div className="rounded-[18px] border border-white/8 bg-white/5 p-4">
+                  <p className="text-xs uppercase tracking-[0.18em] text-white/35">
+                    Apps live
+                  </p>
+                  <p className="mt-3 text-3xl font-semibold tracking-[-0.05em]">
+                    180+
+                  </p>
+                </div>
+                <div className="rounded-[18px] border border-white/8 bg-white/5 p-4">
+                  <p className="text-xs uppercase tracking-[0.18em] text-white/35">
+                    Secured value
+                  </p>
+                  <p className="mt-3 text-3xl font-semibold tracking-[-0.05em]">
+                    $864M
+                  </p>
                 </div>
               </div>
             </div>
           </div>
         </section>
       </div>
-
-      <section
-        id="features"
-        className="mx-auto max-w-7xl px-5 pb-24 pt-8 sm:px-8 lg:px-10"
-      >
-        <div className="grid gap-6 lg:grid-cols-[0.72fr_1.28fr]">
-          <div className="rounded-[2rem] border border-white/10 bg-white/4 p-6 sm:p-8">
-            <p className="text-sm uppercase tracking-[0.32em] text-white/45">
-              Why CoinFusion
-            </p>
-            <h2 className="mt-5 text-3xl font-semibold tracking-[-0.04em] sm:text-4xl">
-              Built for clarity in a market that never slows down.
-            </h2>
-            <p className="mt-4 max-w-md text-base leading-8 text-white/65">
-              The interface focuses on the essential actions first, then layers
-              in deeper market context without making the product feel heavy.
-            </p>
-          </div>
-
-          <div
-            id="markets"
-            className="grid gap-5 md:grid-cols-3"
-          >
-            {features.map((feature) => (
-              <article
-                key={feature.title}
-                className="rounded-[2rem] border border-white/10 bg-[linear-gradient(180deg,rgba(255,255,255,0.05),rgba(255,255,255,0.02))] p-6 shadow-[0_18px_50px_rgba(0,0,0,0.16)]"
-              >
-                <div className="h-12 w-12 rounded-2xl bg-[linear-gradient(135deg,rgba(255,196,77,0.95),rgba(87,70,255,0.95))]" />
-                <h3 className="mt-10 text-2xl font-semibold tracking-[-0.04em]">
-                  {feature.title}
-                </h3>
-                <p className="mt-4 text-sm leading-7 text-white/65">
-                  {feature.copy}
-                </p>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section
-        id="security"
-        className="mx-auto max-w-7xl px-5 pb-24 sm:px-8 lg:px-10"
-      >
-        <div className="grid gap-6 rounded-[2rem] border border-white/10 bg-[linear-gradient(135deg,rgba(18,13,49,0.95),rgba(11,8,31,0.98))] p-6 shadow-[0_24px_80px_rgba(0,0,0,0.22)] sm:p-8 lg:grid-cols-[0.9fr_1.1fr] lg:p-10">
-          <div>
-            <p className="text-sm uppercase tracking-[0.32em] text-white/45">
-              Security Layer
-            </p>
-            <h2 className="mt-5 text-3xl font-semibold tracking-[-0.04em] sm:text-4xl">
-              Control risk without slowing down decisions.
-            </h2>
-            <p className="mt-4 max-w-lg text-base leading-8 text-white/65">
-              CoinFusion keeps the interface fast, but every critical action is
-              paired with stronger review states, clearer approvals, and a vault
-              model that makes intent obvious before value ever moves.
-            </p>
-          </div>
-
-          <div className="grid gap-4 sm:grid-cols-3">
-            {securityNotes.map((note) => (
-              <div
-                key={note}
-                className="rounded-[1.6rem] border border-white/10 bg-white/5 px-5 py-6"
-              >
-                <div className="h-10 w-10 rounded-2xl bg-[linear-gradient(135deg,rgba(255,196,77,0.95),rgba(87,70,255,0.95))]" />
-                <p className="mt-8 text-base leading-7 text-white/80">{note}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
     </main>
   );
 }
