@@ -32,6 +32,12 @@ const highlights = [
   "Built for phone-first investing",
 ];
 
+const securityNotes = [
+  "Biometric confirmation for sensitive actions",
+  "Cold-wallet friendly transfer review",
+  "Fraud-aware activity monitoring",
+];
+
 export default function Home() {
   return (
     <main className="min-h-screen overflow-x-hidden bg-background text-foreground">
@@ -264,6 +270,39 @@ export default function Home() {
                   {feature.copy}
                 </p>
               </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="security"
+        className="mx-auto max-w-7xl px-5 pb-24 sm:px-8 lg:px-10"
+      >
+        <div className="grid gap-6 rounded-[2rem] border border-white/10 bg-[linear-gradient(135deg,rgba(18,13,49,0.95),rgba(11,8,31,0.98))] p-6 shadow-[0_24px_80px_rgba(0,0,0,0.22)] sm:p-8 lg:grid-cols-[0.9fr_1.1fr] lg:p-10">
+          <div>
+            <p className="text-sm uppercase tracking-[0.32em] text-white/45">
+              Security Layer
+            </p>
+            <h2 className="mt-5 text-3xl font-semibold tracking-[-0.04em] sm:text-4xl">
+              Control risk without slowing down decisions.
+            </h2>
+            <p className="mt-4 max-w-lg text-base leading-8 text-white/65">
+              CoinFusion keeps the interface fast, but every critical action is
+              paired with stronger review states, clearer approvals, and a vault
+              model that makes intent obvious before value ever moves.
+            </p>
+          </div>
+
+          <div className="grid gap-4 sm:grid-cols-3">
+            {securityNotes.map((note) => (
+              <div
+                key={note}
+                className="rounded-[1.6rem] border border-white/10 bg-white/5 px-5 py-6"
+              >
+                <div className="h-10 w-10 rounded-2xl bg-[linear-gradient(135deg,rgba(255,196,77,0.95),rgba(87,70,255,0.95))]" />
+                <p className="mt-8 text-base leading-7 text-white/80">{note}</p>
+              </div>
             ))}
           </div>
         </div>
