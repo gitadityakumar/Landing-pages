@@ -4,7 +4,7 @@ Single-page landing page built with Next.js and Tailwind CSS. The design is base
 
 ## Preview
 
-![CoinFusion landing page preview](./public/coinfusion-preview.png)
+![CoinFusion landing page preview](./public/localhost.png)
 
 ## Overview
 
