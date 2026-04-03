@@ -30,8 +30,8 @@
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
+  background: #f4f3ef;
+  color: #111111;
   font-family: var(--font-space-grotesk), sans-serif;
   min-height: 100vh;
 }

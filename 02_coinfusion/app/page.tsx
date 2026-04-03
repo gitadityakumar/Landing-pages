@@ -1,10 +1,10 @@
 import Image from "next/image";
 
 const heroChips = [
-  { title: "Limited Bitcoin view", value: "Fast market snapshots" },
-  { title: "BTC apps", value: "Curated ecosystem flows" },
-  { title: "Proof of transfer", value: "Secured settlement" },
-  { title: "Bitcoin rewards", value: "Native yield paths" },
+  { title: "Limited Bitcoin view", value: "Fast market snapshots", tone: "#ffc43a" },
+  { title: "BTC apps", value: "Curated ecosystem flows", tone: "#5b45ff" },
+  { title: "Proof of transfer", value: "Secured settlement", tone: "#8f8f8f" },
+  { title: "Bitcoin rewards", value: "Native yield paths", tone: "#d9a61a" },
 ];
 
 const stackCards = [
@@ -34,7 +34,7 @@ export default function Home() {
   return (
     <main className="bg-[#f4f3ef] text-[#111111]">
       <div className="mx-auto flex w-full max-w-[1180px] flex-col gap-12 px-3 py-3 sm:px-4 sm:py-4 lg:gap-16">
-        <section className="overflow-hidden rounded-[28px] bg-[#050505] px-5 pb-8 pt-5 text-white sm:rounded-[34px] sm:px-8 sm:pb-10 lg:px-12 lg:pb-12">
+        <section className="overflow-hidden rounded-[28px] bg-[#050505] px-5 pb-8 pt-5 text-white sm:rounded-[34px] sm:px-8 sm:pb-10 lg:px-12 lg:pb-14">
           <div className="mx-auto inline-flex rounded-full border border-white/10 bg-white/6 px-4 py-2 text-[11px] text-white/75 shadow-[inset_0_1px_0_rgba(255,255,255,0.08)] sm:px-6">
             <div className="flex items-center gap-3">
               <span>Explore</span>
@@ -47,7 +47,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="relative mt-14 text-center sm:mt-20">
+          <div className="relative mt-14 text-center sm:mt-20 lg:mt-24">
             <div className="absolute left-1/2 top-1/2 -z-10 h-56 w-56 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#5137ff]/25 blur-3xl sm:h-72 sm:w-72" />
             <h1 className="mx-auto max-w-[11ch] text-5xl font-semibold leading-[0.96] tracking-[-0.06em] text-balance sm:text-6xl lg:text-[78px]">
               Unleash Bitcoin full potential
@@ -73,7 +73,10 @@ export default function Home() {
                 className="rounded-[24px] border border-white/10 bg-[linear-gradient(180deg,rgba(255,255,255,0.06),rgba(255,255,255,0.03))] p-4 shadow-[inset_0_1px_0_rgba(255,255,255,0.05)]"
               >
                 <div className="flex items-center gap-3">
-                  <div className="grid h-8 w-8 place-items-center rounded-full bg-[#1a1a1a] text-xs font-semibold text-[#ffc43a]">
+                  <div
+                    className="grid h-8 w-8 place-items-center rounded-full bg-[#1a1a1a] text-xs font-semibold"
+                    style={{ color: chip.tone }}
+                  >
                     {index + 1}
                   </div>
                   <div>
@@ -110,12 +113,12 @@ export default function Home() {
               </a>
             </div>
 
-            <div className="relative min-h-[240px] rounded-[32px] bg-transparent">
+            <div className="relative min-h-[240px] rounded-[32px] bg-transparent sm:min-h-[280px]">
               <div className="absolute left-[6%] top-[8%] rounded-full border border-[#dbd7cf] bg-white px-4 py-2 text-sm font-semibold text-[#555] shadow-sm">
                 9.5%
               </div>
               <div className="absolute left-[50%] top-[6%] h-11 w-11 rounded-full border-4 border-[#1f1f1f] bg-[radial-gradient(circle_at_35%_35%,#ffe894,#d2a10a)] shadow-md" />
-              <div className="absolute left-[25%] top-[30%] rounded-full bg-[linear-gradient(135deg,#6c56ff,#7b67ff)] px-7 py-4 text-2xl font-semibold tracking-[-0.05em] text-white shadow-[0_16px_35px_rgba(91,69,255,0.22)] sm:text-[34px]">
+              <div className="absolute left-[20%] top-[30%] rounded-full bg-[linear-gradient(135deg,#6c56ff,#7b67ff)] px-6 py-4 text-xl font-semibold tracking-[-0.05em] text-white shadow-[0_16px_35px_rgba(91,69,255,0.22)] sm:left-[25%] sm:px-7 sm:text-[34px]">
                 $864,890,126
               </div>
               <div className="absolute left-[47%] top-[58%] grid h-12 w-12 place-items-center rounded-full bg-[linear-gradient(135deg,#5b45ff,#7a6cff)] text-2xl text-white shadow-[0_14px_35px_rgba(91,69,255,0.25)]">
@@ -142,7 +145,7 @@ export default function Home() {
               {stackCards.map((card, index) => (
                 <article
                   key={card}
-                  className="rounded-[14px] border border-[#e5e1d8] bg-[#efefed] p-5 text-left"
+                  className="rounded-[14px] border border-[#e5e1d8] bg-[#efefed] p-5 text-left sm:min-h-[230px]"
                 >
                   <div className="grid h-8 w-8 place-items-center rounded-full bg-[linear-gradient(135deg,#5b45ff,#7a6cff)] text-xs font-semibold text-white">
                     {index + 1}
@@ -181,7 +184,7 @@ export default function Home() {
               </a>
             </div>
 
-            <div className="grid items-center gap-6 md:grid-cols-[0.7fr_1.3fr]">
+            <div className="grid items-center gap-6 md:grid-cols-[0.72fr_1.28fr]">
               <div className="mx-auto w-full max-w-[220px]">
                 <div className="rounded-[36px] bg-[linear-gradient(180deg,#5f47ff,#4830ea)] p-5 shadow-[0_30px_80px_rgba(91,69,255,0.28)]">
                   <div className="grid h-28 place-items-center rounded-[28px] border border-white/12 bg-white/8">
@@ -218,7 +221,7 @@ export default function Home() {
                       alt="Secure bitcoin app preview"
                       width={265}
                       height={441}
-                      className="h-auto w-full max-w-[260px]"
+                      className="h-auto w-full max-w-[240px] sm:max-w-[260px]"
                     />
                   </div>
                 </div>
@@ -340,6 +343,11 @@ export default function Home() {
                 </div>
               </div>
             </div>
+          </div>
+
+          <div className="mt-12 flex items-center justify-between border-t border-white/10 pt-5 text-xs uppercase tracking-[0.22em] text-white/28">
+            <span>Bitcoin secured internet</span>
+            <span>2026</span>
           </div>
         </section>
       </div>
