@@ -8,16 +8,16 @@ const heroChips = [
 ];
 
 const stackCards = [
-  "Proof of transfer",
-  "Bitcoin to NFTs",
-  "Bitcoin to DeFi",
+  { title: "Proof of transfer", note: "Verify movement" },
+  { title: "Bitcoin to NFTs", note: "Create digital assets" },
+  { title: "Bitcoin to DeFi", note: "Unlock liquidity" },
 ];
 
 const buildChips = [
-  "Apps",
-  "Protocols",
-  "Tooling",
-  "Infrastructure",
+  { title: "Apps", note: "Launch products" },
+  { title: "Protocols", note: "Settlement layer" },
+  { title: "Tooling", note: "Developer stack" },
+  { title: "Infrastructure", note: "Secured nodes" },
 ];
 
 const exploreTabs = [
@@ -49,7 +49,7 @@ export default function Home() {
 
           <div className="relative mt-14 text-center sm:mt-20 lg:mt-24">
             <div className="absolute left-1/2 top-1/2 -z-10 h-56 w-56 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#5137ff]/25 blur-3xl sm:h-72 sm:w-72" />
-            <h1 className="mx-auto max-w-[11ch] text-5xl font-semibold leading-[0.96] tracking-[-0.06em] text-balance sm:text-6xl lg:text-[78px]">
+            <h1 className="mx-auto max-w-[10.5ch] text-[42px] font-semibold leading-[0.96] tracking-[-0.065em] text-balance sm:text-6xl lg:text-[74px]">
               Unleash Bitcoin full potential
             </h1>
             <p className="mx-auto mt-5 max-w-xl text-sm leading-7 text-white/58 sm:text-base">
@@ -70,18 +70,20 @@ export default function Home() {
             {heroChips.map((chip, index) => (
               <div
                 key={chip.title}
-                className="rounded-[24px] border border-white/10 bg-[linear-gradient(180deg,rgba(255,255,255,0.06),rgba(255,255,255,0.03))] p-4 shadow-[inset_0_1px_0_rgba(255,255,255,0.05)]"
+                className="rounded-[20px] border border-white/10 bg-[linear-gradient(180deg,rgba(255,255,255,0.06),rgba(255,255,255,0.03))] px-3 py-3 shadow-[inset_0_1px_0_rgba(255,255,255,0.05)]"
               >
                 <div className="flex items-center gap-3">
                   <div
-                    className="grid h-8 w-8 place-items-center rounded-full bg-[#1a1a1a] text-xs font-semibold"
+                    className="grid h-7 w-7 place-items-center rounded-full bg-[#1a1a1a] text-[10px] font-semibold"
                     style={{ color: chip.tone }}
                   >
                     {index + 1}
                   </div>
                   <div>
-                    <p className="text-sm font-medium">{chip.title}</p>
-                    <p className="mt-1 text-xs text-white/45">{chip.value}</p>
+                    <p className="text-[13px] font-medium leading-tight">{chip.title}</p>
+                    <p className="mt-1 text-[10px] uppercase tracking-[0.14em] text-white/38">
+                      {chip.value}
+                    </p>
                   </div>
                 </div>
               </div>
@@ -98,7 +100,7 @@ export default function Home() {
               <p className="text-xs uppercase tracking-[0.26em] text-[#7b7b7b]">
                 Bitcoin rewards
               </p>
-              <h2 className="mt-4 text-4xl font-semibold leading-[0.96] tracking-[-0.06em] text-[#121212] sm:text-5xl">
+              <h2 className="mt-4 max-w-[10ch] text-4xl font-semibold leading-[0.96] tracking-[-0.06em] text-[#121212] sm:text-5xl">
                 Stacking, a new way to earn bitcoin
               </h2>
               <p className="mt-5 text-sm leading-7 text-[#616161] sm:text-base">
@@ -135,8 +137,8 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="mt-16 text-center">
-            <h3 className="text-3xl font-semibold leading-tight tracking-[-0.05em] sm:text-4xl">
+          <div className="mt-18 text-center sm:mt-20">
+            <h3 className="text-[34px] font-semibold leading-[0.98] tracking-[-0.06em] sm:text-[42px]">
               Stacks unleashed
               <span className="block">Bitcoin</span>
             </h3>
@@ -144,15 +146,19 @@ export default function Home() {
             <div className="mt-10 grid gap-4 md:grid-cols-3">
               {stackCards.map((card, index) => (
                 <article
-                  key={card}
-                  className="rounded-[14px] border border-[#e5e1d8] bg-[#efefed] p-5 text-left sm:min-h-[230px]"
+                  key={card.title}
+                  className="rounded-[14px] border border-[#e5e1d8] bg-[#efefed] p-5 text-left sm:min-h-[250px]"
                 >
                   <div className="grid h-8 w-8 place-items-center rounded-full bg-[linear-gradient(135deg,#5b45ff,#7a6cff)] text-xs font-semibold text-white">
                     {index + 1}
                   </div>
-                  <p className="mt-16 max-w-[10ch] text-2xl font-medium leading-tight tracking-[-0.05em] text-[#111111]">
-                    {card}
+                  <p className="mt-16 text-[11px] uppercase tracking-[0.18em] text-[#9c9c9c]">
+                    Stack path
                   </p>
+                  <p className="mt-3 max-w-[10ch] text-[30px] font-medium leading-[1.02] tracking-[-0.06em] text-[#111111]">
+                    {card.title}
+                  </p>
+                  <p className="mt-5 text-sm text-[#8a8a8a]">{card.note}</p>
                 </article>
               ))}
             </div>
@@ -169,7 +175,7 @@ export default function Home() {
               <p className="text-xs uppercase tracking-[0.26em] text-white/38">
                 App layer
               </p>
-              <h2 className="mt-4 max-w-[10ch] text-4xl font-semibold leading-[0.96] tracking-[-0.06em] sm:text-5xl lg:text-[58px]">
+              <h2 className="mt-4 max-w-[9ch] text-4xl font-semibold leading-[0.96] tracking-[-0.06em] sm:text-5xl lg:text-[56px]">
                 Build powerful apps, secured by bitcoin
               </h2>
               <p className="mt-5 max-w-md text-sm leading-7 text-white/58 sm:text-base">
@@ -185,11 +191,11 @@ export default function Home() {
             </div>
 
             <div className="grid items-center gap-6 md:grid-cols-[0.72fr_1.28fr]">
-              <div className="mx-auto w-full max-w-[220px]">
+              <div className="mx-auto w-full max-w-[200px]">
                 <div className="rounded-[36px] bg-[linear-gradient(180deg,#5f47ff,#4830ea)] p-5 shadow-[0_30px_80px_rgba(91,69,255,0.28)]">
                   <div className="grid h-28 place-items-center rounded-[28px] border border-white/12 bg-white/8">
-                    <div className="grid h-16 w-16 place-items-center rounded-full bg-white text-3xl text-[#5f47ff]">
-                      🔒
+                    <div className="grid h-16 w-16 place-items-center rounded-full bg-white text-2xl text-[#5f47ff]">
+                      ⛨
                     </div>
                   </div>
                   <div className="mt-5 flex justify-center">
@@ -198,7 +204,7 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="relative mx-auto w-full max-w-[420px]">
+              <div className="relative mx-auto w-full max-w-[390px]">
                 <div className="absolute right-4 top-2 h-32 w-32 rounded-full bg-[#f7b925]/14 blur-3xl" />
                 <div className="rounded-[38px] border border-white/10 bg-[linear-gradient(180deg,#1a1a1a,#101010)] p-5">
                   <div className="flex items-start justify-between">
@@ -221,7 +227,7 @@ export default function Home() {
                       alt="Secure bitcoin app preview"
                       width={265}
                       height={441}
-                      className="h-auto w-full max-w-[240px] sm:max-w-[260px]"
+                      className="h-auto w-full max-w-[210px] sm:max-w-[230px]"
                     />
                   </div>
                 </div>
@@ -235,12 +241,22 @@ export default function Home() {
               <span className="block">being built</span>
             </h3>
             <div className="mt-8 grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
-              {buildChips.map((chip) => (
+              {buildChips.map((chip, index) => (
                 <div
-                  key={chip}
-                  className="rounded-[22px] border border-white/10 bg-white/5 px-4 py-4 text-sm text-white/76"
+                  key={chip.title}
+                  className="rounded-[22px] border border-white/10 bg-white/5 px-4 py-4 text-white/76"
                 >
-                  {chip}
+                  <div className="flex items-center gap-3">
+                    <div className="grid h-7 w-7 place-items-center rounded-full bg-[#171717] text-[10px] font-semibold text-white/80">
+                      {index + 1}
+                    </div>
+                    <div>
+                      <p className="text-sm">{chip.title}</p>
+                      <p className="mt-1 text-[10px] uppercase tracking-[0.14em] text-white/35">
+                        {chip.note}
+                      </p>
+                    </div>
+                  </div>
                 </div>
               ))}
             </div>
@@ -292,7 +308,7 @@ export default function Home() {
             {exploreTabs.map((tab, index) => (
               <div
                 key={tab}
-                className={`rounded-full border px-4 py-2 text-sm ${
+                className={`rounded-full border px-4 py-2 text-[12px] ${
                   index === 0
                     ? "border-white/20 bg-white text-black"
                     : "border-white/10 bg-white/6 text-white/72"
