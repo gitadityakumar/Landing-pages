@@ -227,6 +227,7 @@ export default function Home() {
                       alt="Secure bitcoin app preview"
                       width={265}
                       height={441}
+                      loading="eager"
                       className="h-auto w-full max-w-[210px] sm:max-w-[230px]"
                     />
                   </div>
