@@ -11,40 +11,40 @@ const services = [
 
 const projects = [
   {
-    title: "Minimal room",
-    subtitle: "Editorial space",
+    title: "Branding Design",
+    subtitle: "Build a unique website Teamollo.Webflow template",
     image: "/images/feature-1.webp",
-    size: "large",
+    tags: ["Website", "Branding", "Application"],
   },
   {
     title: "Branding Design",
-    subtitle: "Packaging system",
+    subtitle: "Packaging systems that keep product launches clear and memorable.",
     image: "/images/feature-2.webp",
-    size: "small",
+    tags: ["Identity", "Launch", "Packaging"],
   },
   {
     title: "Hanging Design",
-    subtitle: "Campaign object",
+    subtitle: "Campaign objects and print surfaces built with strong editorial contrast.",
     image: "/images/feature-3.webp",
-    size: "small",
+    tags: ["Campaign", "Print", "Editorial"],
   },
   {
     title: "Dizzying Identity",
-    subtitle: "Product visual",
+    subtitle: "Product visuals designed to feel minimal, tactile, and premium.",
     image: "/images/feature-4.webp",
-    size: "large",
+    tags: ["Product", "3D", "Visual"],
   },
   {
     title: "Mouse Design",
-    subtitle: "Interactive focus",
+    subtitle: "High-energy interface directions for launch pages and product demos.",
     image: "/images/feature-5.webp",
-    size: "large",
+    tags: ["UI Design", "Landing", "Motion"],
   },
   {
-    title: "Mouse Design",
-    subtitle: "Playful layout",
+    title: "Mobile Design",
+    subtitle: "Bold application screens with playful composition and clear hierarchy.",
     image: "/images/feature-6.webp",
-    size: "small",
+    tags: ["Mobile", "Product", "Application"],
   },
 ];
 
@@ -123,31 +123,45 @@ export default function Home() {
 
       <section className="content-section">
         <div className="section-shell">
-          <div className="section-intro">
-            <p className="section-kicker">Recent work</p>
-            <div className="section-divider" />
+          <div className="feature-header">
+            <div>
+              <h2 className="feature-title">Selected work!</h2>
+              <p className="feature-copy">
+                We&apos;ve loved working with many fantastic companies, and are really proud of what we&apos;ve
+                achieved together.
+              </p>
+            </div>
           </div>
 
-          <div className="project-grid">
-            {projects.map((project) => (
+          <div className="project-list">
+            {projects.map((project, index) => (
               <article
                 key={`${project.title}-${project.image}`}
-                className={`project-card project-card-${project.size}`}
+                className={`project-card ${index % 2 === 1 ? "project-card-reverse" : ""}`}
               >
+                <div className="project-media">
+                  <div className="project-image-wrap">
+                    <Image
+                      src={project.image}
+                      alt={project.title}
+                      width={900}
+                      height={1100}
+                      className="project-image"
+                    />
+                  </div>
+                  <span className="project-dot" aria-hidden="true" />
+                </div>
                 <div className="project-copy">
-                  <p className="project-title">{project.title}</p>
+                  <h3 className="project-title">{project.title}</h3>
                   <p className="project-subtitle">{project.subtitle}</p>
+                  <div className="project-tags" aria-label={`${project.title} tags`}>
+                    {project.tags.map((tag) => (
+                      <span key={tag} className="project-tag">
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
                 </div>
-                <div className="project-image-wrap">
-                  <Image
-                    src={project.image}
-                    alt={project.title}
-                    width={900}
-                    height={1100}
-                    className="project-image"
-                  />
-                </div>
-                <span className="project-dot" aria-hidden="true" />
               </article>
             ))}
           </div>
