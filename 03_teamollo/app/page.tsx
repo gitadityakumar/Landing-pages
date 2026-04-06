@@ -1,104 +1,87 @@
 import Image from "next/image";
 
 const services = [
-  "Brand Identity",
-  "UI/UX Design",
-  "Strategy",
+  "Branding",
+  "Design System",
   "Web Design",
-  "Motion",
+  "UI Strategy",
   "Development",
+  "App Design",
 ];
 
 const projects = [
   {
     title: "Branding Design",
-    subtitle: "Build a unique website Teamollo.Webflow template",
     image: "/images/feature-1.webp",
-    tags: ["Website", "Branding", "Application"],
+    alt: "A minimal desk and wall composition",
   },
   {
     title: "Branding Design",
-    subtitle: "Packaging systems that keep product launches clear and memorable.",
     image: "/images/feature-2.webp",
-    tags: ["Identity", "Launch", "Packaging"],
+    alt: "Packaging and poster design layout",
   },
   {
     title: "Hanging Design",
-    subtitle: "Campaign objects and print surfaces built with strong editorial contrast.",
     image: "/images/feature-3.webp",
-    tags: ["Campaign", "Print", "Editorial"],
+    alt: "Fashion editorial hanging card",
   },
   {
-    title: "Dizzying Identity",
-    subtitle: "Product visuals designed to feel minimal, tactile, and premium.",
+    title: "Dizzy Identity",
     image: "/images/feature-4.webp",
-    tags: ["Product", "3D", "Visual"],
+    alt: "Glossy product renders with a blue gradient",
   },
   {
     title: "Mouse Design",
-    subtitle: "High-energy interface directions for launch pages and product demos.",
     image: "/images/feature-5.webp",
-    tags: ["UI Design", "Landing", "Motion"],
+    alt: "A black laptop keyboard composition",
   },
   {
     title: "Mobile Design",
-    subtitle: "Bold application screens with playful composition and clear hierarchy.",
     image: "/images/feature-6.webp",
-    tags: ["Mobile", "Product", "Application"],
+    alt: "Red poster composition",
   },
 ];
 
 const capabilities = [
   {
-    title: "What we can do?",
-    text: "We build bold landing pages, product stories, and design systems that feel polished at every breakpoint.",
+    title: "What can Teamollo actually build?",
+    text: "Landing pages, brand systems, interfaces, product visuals, and frontend-ready design direction.",
   },
   {
-    title: "How we do?",
-    text: "A focused mix of visual direction, structure, and frontend implementation keeps the work clean and shippable.",
+    title: "How do we make it feel right?",
+    text: "Clear hierarchy, deliberate white space, bold image pairings, and strong editorial pacing.",
   },
   {
-    title: "Why it works?",
-    text: "The output is consistent, memorable, and optimized for both portfolio presentation and real-world product launches.",
+    title: "Why does it convert better?",
+    text: "The experience is memorable, easier to scan, and shaped to push attention toward the right action.",
   },
 ];
 
-const testimonials = [
-  "Awwwards",
-  "Behance",
-  "Dribbble",
-  "CSSDA",
-];
+const partners = ["Behance", "Awwwards", "Dribbble", "Figma"];
 
 export default function Home() {
   return (
-    <main className="teamollo-page">
-      <section className="hero-section">
-        <div className="hero-orb hero-orb-left" />
-        <div className="hero-orb hero-orb-right" />
-        <div className="hero-ring hero-ring-top" />
-        <div className="hero-ring hero-ring-bottom" />
+    <main className="teamollo-app">
+      <div className="page-shell">
+        <section className="hero-panel">
+          <div className="hero-decor hero-decor-blur" aria-hidden="true" />
+          <div className="hero-decor hero-decor-dot-left" aria-hidden="true" />
+          <div className="hero-decor hero-decor-dot-right" aria-hidden="true" />
+          <div className="hero-decor hero-decor-ring" aria-hidden="true" />
 
-        <div className="section-shell hero-shell">
-          <p className="eyebrow">Creative Direction</p>
-          <div className="hero-heading-row">
-            <h1 className="hero-title">
-              Let&apos;s Talk
-              <br />
-              To Design
-              <br />
-              Teamollo
-            </h1>
-            <div className="hero-dots" aria-hidden="true">
-              <span />
-              <span />
-            </div>
-          </div>
+          <p className="hero-kicker">Home</p>
+          <h1 className="hero-title">
+            Let&apos;s Talk
+            <br />
+            To Design
+            <br />
+            Teamollo
+          </h1>
 
-          <div className="hero-image-wrap">
+          <div className="hero-image-frame">
             <Image
               src="/images/heroimage.webp"
-              alt="Teamollo studio interior"
+              alt="Teamollo creative studio space"
               width={1200}
               height={760}
               priority
@@ -107,75 +90,55 @@ export default function Home() {
           </div>
 
           <p className="hero-copy">
-            We are an award-winning strategy, design, and production team crafting memorable digital experiences.
-            Thoughtful visuals and clean interfaces help modern brands move with clarity and speed.
+            We are an award-winning strategy, design, and production team. A digital partner for founders,
+            products, and modern brands that need strong visuals and a clear interface language.
           </p>
 
-          <div className="service-pills" aria-label="Services">
+          <div className="service-grid" aria-label="Services">
             {services.map((service) => (
               <span key={service} className="service-pill">
                 {service}
               </span>
             ))}
           </div>
-        </div>
-      </section>
+        </section>
 
-      <section className="content-section">
-        <div className="section-shell">
-          <div className="feature-header">
-            <div>
-              <h2 className="feature-title">Selected work!</h2>
-              <p className="feature-copy">
-                We&apos;ve loved working with many fantastic companies, and are really proud of what we&apos;ve
-                achieved together.
-              </p>
-            </div>
+        <section className="works-section">
+          <div className="section-heading">
+            <p className="section-kicker">Selected works</p>
           </div>
 
-          <div className="project-list">
+          <div className="works-grid">
             {projects.map((project, index) => (
               <article
                 key={`${project.title}-${project.image}`}
-                className={`project-card ${index % 2 === 1 ? "project-card-reverse" : ""}`}
+                className={`work-card ${index % 2 === 1 ? "work-card-offset" : ""}`}
               >
-                <div className="project-media">
-                  <div className="project-image-wrap">
-                    <Image
-                      src={project.image}
-                      alt={project.title}
-                      width={900}
-                      height={1100}
-                      className="project-image"
-                    />
-                  </div>
-                  <span className="project-dot" aria-hidden="true" />
+                <div className="work-media">
+                  <Image
+                    src={project.image}
+                    alt={project.alt}
+                    width={900}
+                    height={1100}
+                    className="work-image"
+                  />
                 </div>
-                <div className="project-copy">
-                  <h3 className="project-title">{project.title}</h3>
-                  <p className="project-subtitle">{project.subtitle}</p>
-                  <div className="project-tags" aria-label={`${project.title} tags`}>
-                    {project.tags.map((tag) => (
-                      <span key={tag} className="project-tag">
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
+                <div className="work-meta">
+                  <h2 className="work-title">{project.title}</h2>
+                  <span className="work-arrow" aria-hidden="true" />
                 </div>
               </article>
             ))}
           </div>
-        </div>
-      </section>
+        </section>
 
-      <section className="capabilities-section">
-        <div className="section-shell">
+        <section className="capability-section">
           <div className="capability-heading">
             <div>
-              <p className="capability-pretitle">Take a look</p>
+              <p className="section-kicker">Take a Look</p>
               <h2 className="capability-title">at What</h2>
             </div>
-            <div className="capability-title-right">
+            <div className="capability-heading-right">
               <h2 className="capability-title">We Can Do</h2>
               <h2 className="capability-title">For You</h2>
             </div>
@@ -184,58 +147,42 @@ export default function Home() {
           <div className="capability-grid">
             {capabilities.map((item) => (
               <article key={item.title} className="capability-card">
-                <div className="capability-card-top">
-                  <span className="capability-plus">+</span>
-                  <span className="capability-rule" />
+                <div className="capability-card-line">
+                  <span className="capability-card-plus">+</span>
+                  <span className="capability-card-rule" />
                 </div>
                 <h3>{item.title}</h3>
                 <p>{item.text}</p>
-                <a href="#contact">Know More</a>
               </article>
             ))}
           </div>
-        </div>
-      </section>
+        </section>
 
-      <section className="testimonial-section">
-        <div className="section-shell">
-          <div className="testimonial-track" aria-label="Highlights">
-            {testimonials.map((item) => (
-              <span key={item} className="testimonial-item">
-                {item}
-              </span>
-            ))}
-          </div>
-        </div>
-      </section>
+        <section className="partner-section" aria-label="Partners">
+          {partners.map((partner) => (
+            <div key={partner} className="partner-item">
+              <span className="partner-dot" aria-hidden="true" />
+              <span>{partner}</span>
+            </div>
+          ))}
+        </section>
 
-      <section className="statement-section">
-        <div className="section-shell statement-shell">
-          <p className="statement-copy">
-            Every interaction of Students around the World
-          </p>
-          <a className="statement-button" href="#contact">
+        <section className="quote-section">
+          <p className="quote-copy">Those creations of Students around the World</p>
+          <a href="#contact" className="quote-button">
             Offer
           </a>
-        </div>
-      </section>
+        </section>
 
-      <section className="cta-section" id="contact">
-        <div className="section-shell cta-shell">
-          <div>
-            <p className="cta-kicker">Start with us</p>
-            <h2 className="cta-title">
-              Want to Start
-              <br />
-              a Project?
-            </h2>
-          </div>
-
-          <a className="cta-button" href="mailto:hello@teamollo.com">
-            hello@teamollo.com
-          </a>
-        </div>
-      </section>
+        <section id="contact" className="cta-panel">
+          <span className="cta-lines" aria-hidden="true" />
+          <p className="section-kicker cta-kicker">Office</p>
+          <h2 className="cta-title">
+            Want to Start
+            <br />a Project?
+          </h2>
+        </section>
+      </div>
     </main>
   );
 }
