@@ -64,10 +64,10 @@ const capabilities = [
 ];
 
 const testimonials = [
-  "Loud ideas, clean execution.",
-  "Interface systems with personality.",
-  "Designed for launch, not just mockups.",
-  "Reliable across mobile and desktop.",
+  "Awwwards",
+  "Behance",
+  "Dribbble",
+  "CSSDA",
 ];
 
 export default function Home() {
@@ -187,7 +187,7 @@ export default function Home() {
         <div className="section-shell">
           <div className="testimonial-track" aria-label="Highlights">
             {testimonials.map((item) => (
-              <span key={item}>
+              <span key={item} className="testimonial-item">
                 {item}
               </span>
             ))}

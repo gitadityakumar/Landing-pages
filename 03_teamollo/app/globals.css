@@ -55,6 +55,7 @@ img {
   position: relative;
   overflow: hidden;
   background:
+    radial-gradient(circle at 74% 8%, rgba(255, 255, 255, 0.22), transparent 16%),
     radial-gradient(circle at 16% 18%, rgba(199, 255, 85, 0.32), transparent 16%),
     radial-gradient(circle at 82% 12%, rgba(255, 255, 255, 0.18), transparent 12%),
     linear-gradient(180deg, var(--hero-top) 0%, #7018dd 48%, var(--hero-bottom) 100%);
@@ -153,6 +154,7 @@ img {
   margin-top: clamp(1.2rem, 4vw, 2rem);
   border: 1px solid rgba(255, 255, 255, 0.22);
   box-shadow: 0 18px 50px rgba(0, 0, 0, 0.24);
+  background: rgba(0, 0, 0, 0.16);
 }
 
 .hero-image {
@@ -225,7 +227,7 @@ img {
 .project-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1.2rem 1rem;
+  gap: 1.5rem 1rem;
 }
 
 .project-card {
@@ -244,7 +246,7 @@ img {
   display: flex;
   justify-content: space-between;
   gap: 0.75rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.55rem;
 }
 
 .project-title,
@@ -298,6 +300,7 @@ img {
   grid-template-columns: 1fr 1fr;
   gap: 1rem;
   align-items: end;
+  padding-bottom: 0.6rem;
 }
 
 .capability-title {
@@ -315,7 +318,7 @@ img {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1rem;
-  margin-top: 1.6rem;
+  margin-top: 1.3rem;
 }
 
 .capability-card {
@@ -361,7 +364,7 @@ img {
 }
 
 .testimonial-section {
-  padding-top: 2.2rem;
+  padding-top: 2rem;
 }
 
 .testimonial-track {
@@ -375,6 +378,13 @@ img {
   font-size: 0.76rem;
 }
 
+.testimonial-item {
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
 .statement-section {
   padding-top: 1.2rem;
 }
@@ -384,7 +394,8 @@ img {
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
-  padding-block: 1rem;
+  padding-block: 1.1rem 1rem;
+  border-bottom: 1px solid var(--line);
 }
 
 .statement-copy {
@@ -419,6 +430,7 @@ img {
   padding-bottom: clamp(1.4rem, 5vw, 2.6rem);
   position: relative;
   overflow: hidden;
+  min-height: 16rem;
 }
 
 .cta-shell::before,
@@ -512,7 +524,7 @@ img {
   }
 
   .project-grid {
-    gap: 1rem 0.9rem;
+    gap: 1.35rem 0.9rem;
   }
 
   .project-copy {
@@ -526,14 +538,15 @@ img {
 
   .capability-heading {
     grid-template-columns: 1fr 1fr;
+    gap: 0.7rem;
   }
 
   .capability-title {
-    font-size: 2rem;
+    font-size: 1.7rem;
   }
 
   .capability-grid {
-    margin-top: 1.3rem;
+    margin-top: 1rem;
     gap: 1.2rem;
   }
 
@@ -542,8 +555,15 @@ img {
   }
 
   .testimonial-track {
-    gap: 0.7rem;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 0.4rem;
     padding-block: 0.8rem;
+    font-size: 0.64rem;
+  }
+
+  .testimonial-item {
+    font-size: 0.58rem;
+    letter-spacing: 0.08em;
   }
 
   .statement-shell {
@@ -557,5 +577,9 @@ img {
 
   .statement-button {
     padding: 0.55rem 0.86rem;
+  }
+
+  .cta-shell {
+    min-height: 13rem;
   }
 }
