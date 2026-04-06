@@ -41,7 +41,7 @@ const services = [
     image: "/images/feature-6.webp",
     accent: "bottom-right",
   },
-];
+] as const;
 
 const proofItems = [
   {
