@@ -1,10 +1,23 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Teamollo Landing Page
+
+A beautifully crafted, high-fidelity, and fully responsive landing page for the fictional design agency **Teamollo**, built to pixel-perfect parameters based on the original design reference. It leverages Next.js, React, and modern Tailwind CSS to provide a clean, accessible, and fast experience.
+
+![Teamollo Landing Page Preview](./public/preview.png)
+
+## Overview
+
+This project was built to illustrate advanced structured landing page design implementing:
+- **Mesh Gradients**: A beautifully structured mesh hero gradient transitioning cleanly into a white background layout.
+- **Alternating Component Layouts**: Perfect alternating zig-zag card grid.
+- **Tailwind CSS Flexbox & Grid Patterns**: Clean structure spanning all breakpoints (mobile, tablet, desktop).
+- **Smooth Integrations**: Custom `lucide-react` icons that scale dynamically.
 
 ## Getting Started
 
-First, run the development server:
+First, install dependencies and start the development server:
 
 ```bash
+npm install
 npm run dev
 # or
 yarn dev
@@ -16,21 +29,9 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Tech Stack
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **Next.js** - React Framework
+- **Tailwind CSS** - Utility-first CSS framework
+- **Lucide React** - SVG Icons
+- **Vercel** - Deployment 
