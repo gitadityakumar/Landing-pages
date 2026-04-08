@@ -1,295 +1,319 @@
 import Image from "next/image";
+import { ArrowDown, ArrowRight, Menu } from "lucide-react";
 
-const chips = [
-  "Branding",
-  "Digital Design",
+const servicesList = [
   "Web Design",
-  "Identity",
-  "Direction",
-  "Development",
-  "Strategy",
+  "Web Devolopment",
+  "App design",
+  "Branding Design",
+  "3D Modeling",
+  "Digital Marketing",
+  "Animation",
+  "web App Design & Devolopment",
+  "UI/UX",
 ];
 
-const services = [
-  {
-    title: "Interior Design",
-    image: "/images/feature-1.webp",
-    accent: "top-left",
-  },
+const selectedWorks = [
   {
     title: "Branding Design",
-    image: "/images/feature-2.webp",
-    accent: "top-right",
+    description: "Build a unique website Teamollo.Webflow template",
+    image: "/images/feature-1.webp",
+    tags: ["Website", "Branding", "Application"],
   },
   {
-    title: "Luxury Identity",
+    title: "Application Design",
+    description: "Build a unique website Teamollo.Webflow template",
+    image: "/images/feature-2.webp",
+    tags: ["Website", "Branding", "Application"],
+  },
+  {
+    title: "Braning Identity",
+    description: "Build a unique website Teamollo.Webflow template",
     image: "/images/feature-3.webp",
-    accent: "bottom-right",
+    tags: ["Website", "Branding", "Application"],
   },
   {
     title: "Packaging Design",
+    description: "Build a unique website Teamollo.Webflow template",
     image: "/images/feature-4.webp",
-    accent: "bottom-left",
+    tags: ["Website", "Branding", "Application"],
   },
   {
     title: "Website Design",
+    description: "Build a unique website Teamollo.Webflow template",
     image: "/images/feature-5.webp",
-    accent: "top-left",
+    tags: ["Website", "Branding", "Application"],
   },
   {
-    title: "Visual Design",
+    title: "Website Design",
+    description: "Build a unique website Teamollo.Webflow template",
     image: "/images/feature-6.webp",
-    accent: "bottom-right",
-  },
-] as const;
-
-const proofItems = [
-  {
-    title: "What can Teamollo help you with?",
-    body: "We build identity systems, launch-ready sites, and digital experiences that feel crisp on first contact.",
-  },
-  {
-    title: "How do we work?",
-    body: "Fast workshops, sharp art direction, and production-minded design keep projects moving without losing polish.",
-  },
-  {
-    title: "What is the outcome?",
-    body: "A memorable brand surface with clear messaging, clean systems, and assets ready to ship.",
+    tags: ["Website", "Branding", "Application"],
   },
 ];
 
-const partners = ["Framer", "Lummi", "Webflow", "Figma", "Notion", "Linear"];
+const testimonials = [
+  {
+    text: "While the copany wishes they had more time to work out the kinks with the Teamollo, they are quite happy with the result of the project. The resulting website that the teamdevoloped is fast and the communication with the vender was very good. The company will work with them again.",
+    name: "Ashley Cooper",
+    avatar: "/images/heroimage.webp", // Placeholder
+  },
+  {
+    text: "Teamollo delivered the site with inthe timeline as they requested. Inthe end, the client found a 50% increase in traffic with in days since its launch. They also had an impressive ability to use technologies that the company hasn't used, which have also proved to be easy to use and reliable.",
+    name: "Anton de Swardt",
+    avatar: "/images/heroimage.webp", // Placeholder
+  },
+  {
+    text: "Teamollo of owrk , our brand now has the image we were looking for - playful yet professio -nals. We have recived positive from partners , the team, and our community to the new look of our Brand!",
+    name: "Anton de Swardt",
+    avatar: "/images/heroimage.webp", // Placeholder
+  },
+];
 
-function ServiceTitle({
-  title,
-  accent,
-}: {
-  title: string;
-  accent: "top-left" | "top-right" | "bottom-left" | "bottom-right";
-}) {
-  const positionMap = {
-    "top-left": "left-4 top-4 text-left",
-    "top-right": "right-4 top-4 text-right",
-    "bottom-left": "bottom-4 left-4 text-left",
-    "bottom-right": "bottom-4 right-4 text-right",
-  } satisfies Record<typeof accent, string>;
-
-  return (
-    <div className={`absolute ${positionMap[accent]} max-w-[7.5rem]`}>
-      <p className="text-[0.7rem] font-semibold leading-tight text-zinc-900">
-        {title}
-      </p>
-    </div>
-  );
-}
+const brands = ["CAMBRIAN", "COMMVAULT", "Crompton", "SECLOCK", "softwareAG", "aumi"];
+const smallBrands = ["CAMBRIAN", "Olive", "Qlik", "SECLOCK"];
 
 export default function Home() {
   return (
-    <main className="min-h-screen w-full bg-[#ececec]">
-      <section className="w-full overflow-hidden bg-[#100f12] text-white">
-        <div className="relative mx-auto w-full max-w-[1400px] px-6 pb-10 pt-6 sm:px-8 lg:px-12">
-          <div className="absolute inset-x-0 top-0 h-52 bg-[radial-gradient(circle_at_85%_0%,rgba(184,73,255,0.95),rgba(100,31,176,0.7)_24%,rgba(16,15,18,0)_58%)]" />
-          <div className="absolute -right-5 top-28 h-24 w-24 rounded-full bg-[radial-gradient(circle,rgba(179,255,0,0.55),rgba(179,255,0,0))]" />
-          <div className="absolute left-6 top-20 h-4 w-4 rounded-full bg-[#d9ff00]" />
-          <div className="absolute right-20 top-10 h-3 w-3 rounded-full bg-white/70" />
+    <main className="min-h-screen w-full bg-white flex flex-col font-sans">
+      
+      {/* 1. Hero Section w/ Gradient */}
+      <section className="relative overflow-hidden pt-6 pb-0 bg-[#310260]">
+        <div className="absolute inset-0 bg-gradient-to-br from-[#1b0044] via-[#4d10a2] to-[#ff00ee] opacity-80 z-0"></div>
+        {/* Adds radial highlight to top left */}
+        <div className="absolute top-[-20%] left-[-10%] w-[50%] h-[50%] bg-[#4d10a2] blur-[120px] rounded-full z-0 pointer-events-none"></div>
+        {/* Soft fade into white at bottom */}
+        <div className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-white to-transparent z-0 pointer-events-none"></div>
 
-          <div className="relative mx-auto w-full max-w-[420px] lg:max-w-none">
-            <div className="flex items-start justify-between">
-              <p className="text-[0.72rem] font-semibold uppercase tracking-[0.35em] text-white/70">
-                Teamollo
-              </p>
-              <button
-                type="button"
-                aria-label="Open navigation"
-                className="mt-1 flex h-9 w-9 items-center justify-center rounded-full border border-white/15 bg-white/6 backdrop-blur"
-              >
-                <span className="flex w-4 flex-col gap-1">
-                  <span className="h-px w-full bg-white" />
-                  <span className="h-px w-full bg-white" />
-                  <span className="h-px w-full bg-white" />
-                </span>
-              </button>
+        <div className="relative z-10 max-w-[1400px] mx-auto px-6 lg:px-12">
+          {/* Header */}
+          <header className="flex justify-between items-center mb-16 lg:mb-24">
+            <div className="text-white text-2xl font-bold tracking-tight">Teamollo<span className="text-[#b9ff28]">.</span></div>
+            <div className="flex items-center gap-6">
+              <a href="#" className="border border-white/20 rounded-full px-5 py-2 text-xs font-semibold text-white hover:bg-white/10 transition">Let's talk</a>
+              <button aria-label="Menu" className="text-white"><Menu size={28} strokeWidth={1.5} /></button>
             </div>
+          </header>
 
-            <div className="mt-9 grid gap-5 lg:grid-cols-[minmax(0,20rem)_minmax(0,1fr)] lg:items-start lg:gap-10">
-              <div>
-                <h1 className="max-w-[13rem] text-[2.2rem] font-extrabold leading-[0.95] tracking-[-0.05em] sm:text-[2.8rem]">
-                  Let&apos;s Talk
-                  <br />
-                  To Design
-                  <br />
-                  Teamollo
-                </h1>
-
-                <div className="mt-5 border-t border-white/10 pt-4 text-[0.68rem] leading-[1.5] text-white/70 lg:max-w-[18rem]">
-                  <p>
-                    We are a creative branding boutique studio focused on visual
-                    identity, digital product pages, and launch-ready
-                    storytelling. Design should feel alive, sharp, and easy to
-                    remember.
-                  </p>
-                </div>
-              </div>
-
-              <div>
-                <div className="relative overflow-hidden rounded-[2px] border border-white/10 bg-[#1f1e22]">
-                  <Image
-                    src="/images/heroimage.webp"
-                    alt="Design studio worktable"
-                    width={1633}
-                    height={789}
-                    className="h-[145px] w-full object-cover sm:h-[220px] lg:h-[360px]"
-                    priority
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/25 to-transparent" />
-                </div>
+          <div className="flex flex-col lg:flex-row justify-between items-start lg:items-end pb-12 lg:pb-32">
+            <h1 className="text-white text-7xl sm:text-8xl lg:text-[140px] font-bold leading-[0.9] tracking-[-0.04em]">
+              Let`s Talk <br /> To Design <br /> Teamollo
+            </h1>
+            
+            <div className="mt-16 lg:mt-0 flex flex-col items-start lg:items-end max-w-sm">
+              <p className="text-white text-sm lg:text-right font-medium leading-relaxed max-w-[240px] mb-12">
+                Here we go a small intro paragraph that talks about our company and team
+              </p>
+              <div className="w-16 h-16 rounded-full bg-[#b9ff28] flex items-center justify-center text-black shadow-lg">
+                <ArrowDown size={24} strokeWidth={2} />
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="w-full bg-[#121215] text-white">
-        <div className="mx-auto flex w-full max-w-[1400px] flex-wrap gap-2 px-6 py-5 sm:px-8 lg:px-12">
-          {chips.map((chip) => (
-            <span
-              key={chip}
-              className="rounded-full border border-white/18 px-3 py-1.5 text-[0.62rem] font-medium tracking-[0.06em] text-white/76"
-            >
-              {chip}
-            </span>
-          ))}
+      {/* 2. Office Image full-width container */}
+      <section className="relative z-20 w-full px-6 lg:px-12 -mt-8 sm:-mt-16 lg:-mt-24 mb-16 lg:mb-32 max-w-[1400px] mx-auto">
+         <div className="w-full h-[250px] sm:h-[400px] lg:h-[650px] overflow-hidden">
+           <Image 
+             src="/images/heroimage.webp" 
+             alt="Office" 
+             width={1400} 
+             height={800} 
+             className="w-full h-full object-cover rounded-none"
+             priority
+           />
+         </div>
+      </section>
+
+      {/* 3. About Paragraph */}
+      <section className="w-full bg-white px-6 lg:px-12 mb-20 lg:mb-32 max-w-[1400px] mx-auto">
+        <div className="max-w-[1000px]">
+          <h3 className="text-black font-semibold text-sm mb-6 lg:mb-10">Hello Stranger</h3>
+          <p className="text-[1.3rem] sm:text-[1.8rem] lg:text-[2.2rem] text-black font-medium leading-[1.4] tracking-[-0.01em]">
+            We are an award-winning strategic design company that provides consultancy services worldwide. Our team consists of a superb blend of thinkers, strategists, designers, researchers, developers and organisers. Not too big,not too small,quite sensible and completely independent.
+          </p>
         </div>
       </section>
 
-      <section className="w-full bg-white">
-        <div className="mx-auto w-full max-w-[1400px] px-6 py-8 sm:px-8 lg:px-12">
-          <div className="mb-5 flex items-end justify-between gap-6">
-            <div>
-              <p className="text-[0.62rem] font-semibold uppercase tracking-[0.28em] text-zinc-400">
-                Selected Work
-              </p>
-              <h2 className="mt-1 text-lg font-bold tracking-[-0.04em] text-zinc-950">
-                Recent projects
-              </h2>
-            </div>
-            <p className="max-w-[6.5rem] text-right text-[0.62rem] leading-relaxed text-zinc-500">
-              Branding, visual systems and presentation surfaces.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-2 gap-x-4 gap-y-5 md:grid-cols-3 lg:gap-x-6 lg:gap-y-7">
-            {services.map((service) => (
-              <article key={service.title} className="group">
-                <div className="relative overflow-hidden rounded-[2px] bg-[#f5f3ef]">
-                  <Image
-                    src={service.image}
-                    alt={service.title}
-                    width={805}
-                    height={734}
-                    className="aspect-[0.92] w-full object-cover transition-transform duration-300 group-hover:scale-[1.02]"
-                  />
-                  <ServiceTitle
-                    title={service.title}
-                    accent={service.accent}
-                  />
-                  <span className="absolute bottom-2 left-1/2 h-3 w-3 -translate-x-1/2 rounded-full bg-black shadow-[0_0_0_3px_rgba(255,255,255,0.65)]" />
-                </div>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="w-full bg-[#faf9f7] text-zinc-950">
-        <div className="mx-auto w-full max-w-[1400px] px-6 py-10 sm:px-8 lg:px-12">
-          <div className="grid grid-cols-2 gap-6 md:grid-cols-[1fr_auto]">
-            <div>
-              <p className="text-[1.45rem] font-bold leading-[1.05] tracking-[-0.06em]">
-                Take a Look
-                <br />
-                at What
-              </p>
-            </div>
-            <div className="text-right">
-              <p className="text-[1.45rem] font-bold leading-[1.05] tracking-[-0.06em]">
-                We Can Do
-                <br />
-                For You
-              </p>
-            </div>
-          </div>
-
-          <div className="mt-8 grid gap-5 lg:grid-cols-3 lg:gap-8">
-            {proofItems.map((item, index) => (
-              <article
-                key={item.title}
-                className="grid grid-cols-[auto_1fr] items-start gap-3 border-b border-zinc-200 pb-5 last:border-b-0 lg:border-b-0 lg:border-r lg:pr-6 last:lg:border-r-0"
+      {/* 4. Our Services (Black Bg) */}
+      <section className="w-full bg-[#0a0a0a] py-20 lg:py-32 px-6 lg:px-12">
+        <div className="max-w-[1400px] mx-auto flex flex-col justify-center text-center">
+          <p className="text-white text-sm font-semibold mb-12 text-left sm:text-center w-full max-w-[900px] mx-auto">Our Service</p>
+          
+          <div className="max-w-[900px] mx-auto flex flex-wrap justify-center gap-3 lg:gap-5">
+            {servicesList.map((service, idx) => (
+              <div 
+                key={idx} 
+                className="border border-white/20 text-white rounded-full px-6 py-3 lg:px-8 lg:py-4 text-sm sm:text-base lg:text-xl font-medium tracking-wide transition pointer-events-auto cursor-pointer"
               >
-                <span className="mt-1 inline-flex h-5 w-5 items-center justify-center rounded-full border border-zinc-300 text-[0.55rem] font-semibold text-zinc-500">
-                  0{index + 1}
-                </span>
-                <div>
-                  <h3 className="text-[0.78rem] font-semibold tracking-[-0.02em] text-zinc-900">
-                    {item.title}
-                  </h3>
-                  <p className="mt-1 text-[0.68rem] leading-[1.55] text-zinc-500">
-                    {item.body}
-                  </p>
-                </div>
-              </article>
+                {service}
+              </div>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="w-full border-y border-zinc-200 bg-white">
-        <div className="mx-auto flex w-full max-w-[1400px] flex-wrap items-center justify-between gap-x-4 gap-y-3 px-6 py-4 text-[0.64rem] font-semibold uppercase tracking-[0.18em] text-zinc-400 sm:px-8 lg:px-12">
-          {partners.map((partner) => (
-            <span key={partner}>{partner}</span>
+      {/* 5. Selected Work! */}
+      <section className="w-full bg-white py-20 lg:py-32 px-6 lg:px-12">
+        <div className="max-w-[1400px] mx-auto">
+          <h2 className="text-2xl sm:text-3xl font-bold mb-3 text-black">Selected work!</h2>
+          <p className="text-gray-400 text-sm max-w-sm mb-16 lg:mb-32 font-medium leading-relaxed">
+            We `ve loved working with many fantastic companies. <br/>and are really proud of what we `ve achived together.
+          </p>
+
+          <div className="flex flex-col gap-24 lg:gap-40">
+            {selectedWorks.map((work, index) => {
+              const isEven = index % 2 !== 0;
+              return (
+                <div key={index} className={`flex flex-col gap-10 lg:gap-20 ${isEven ? 'lg:flex-row-reverse' : 'lg:flex-row'} items-center`}>
+                  {/* Image wrapper */}
+                  <div className="w-full lg:w-1/2 relative bg-[#f4f4f4]">
+                    <Image 
+                      src={work.image} 
+                      alt={work.title} 
+                      width={800} height={600} 
+                      className="w-full h-auto aspect-square object-cover" 
+                    />
+                    <div className="absolute -bottom-6 left-1/2 -translate-x-1/2 w-14 h-14 bg-black rounded-full flex items-center justify-center text-white z-10">
+                      <ArrowRight size={24} strokeWidth={1.5} />
+                    </div>
+                  </div>
+                  {/* Text wrapper */}
+                  <div className={`w-full lg:w-1/2 ${isEven ? 'lg:pr-20' : 'lg:pl-20'}`}>
+                    <h3 className="text-3xl lg:text-5xl font-bold mb-4 text-black">{work.title}</h3>
+                    <p className="text-gray-400 text-sm mb-10">{work.description}</p>
+                    <div className="flex flex-wrap gap-2 lg:gap-4">
+                      {work.tags.map(tag => (
+                        <span key={tag} className="border border-gray-200 px-5 py-2 rounded-full text-[0.65rem] lg:text-xs text-gray-500 font-medium">
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* 6. Take a Look text */}
+      <section className="w-full bg-white pb-20 lg:pb-32 px-6 lg:px-12">
+        <div className="max-w-[1400px] mx-auto flex flex-col md:flex-row items-center justify-between gap-8 md:gap-0 relative">
+           <h2 className="text-4xl sm:text-6xl lg:text-[80px] font-bold text-black leading-none tracking-tight w-full md:w-auto z-10 md:text-left">
+             Take a Look <br/> at What
+           </h2>
+           <div className="hidden md:flex w-40 h-40 rounded-full bg-[#b5ed3d] flex items-center justify-center text-black font-semibold absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-0">
+             All Work
+           </div>
+           <h2 className="text-4xl sm:text-6xl lg:text-[80px] font-bold text-black leading-none tracking-tight w-full md:w-auto z-10 md:text-right">
+             We Can Do <br/> For You
+           </h2>
+        </div>
+      </section>
+
+      {/* 7. Testimonials */}
+      <section className="w-full bg-white pb-20 lg:pb-32 px-6 lg:px-12">
+        <div className="max-w-[1400px] mx-auto text-center">
+          <h2 className="text-3xl lg:text-4xl font-bold text-black mb-16 lg:mb-24">
+            What our Clients are <br/> saying about us!
+          </h2>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-left">
+            {testimonials.map((testi, index) => (
+              <div key={index} className="bg-[#f8f9fa] rounded-2xl p-8 lg:p-10 flex flex-col justify-between">
+                <p className="text-gray-600 text-sm leading-relaxed mb-10">"{testi.text}"</p>
+                <div className="flex items-center gap-4">
+                  <div className="w-10 h-10 rounded-full overflow-hidden bg-gray-200">
+                     <Image src={testi.avatar} width={40} height={40} alt={testi.name} className="w-full h-full object-cover" />
+                  </div>
+                  <div>
+                    <h4 className="text-black font-bold text-sm">{testi.name}</h4>
+                    <div className="flex text-yellow-500 text-xs mt-1">★★★★★</div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+          
+          <div className="flex justify-center gap-4 mt-8">
+            <button className="w-10 h-10 rounded-full border border-gray-200 text-black flex items-center justify-center">←</button>
+            <button className="w-10 h-10 rounded-full bg-black text-white flex items-center justify-center">→</button>
+          </div>
+        </div>
+      </section>
+
+      {/* 8. Ticker 1 */}
+      <section className="w-full border-t border-b border-gray-100 py-10">
+        <p className="text-center text-xs text-gray-400 font-semibold mb-8 uppercase tracking-widest">Trusted by the 150+ companies</p>
+        <div className="max-w-[1400px] mx-auto flex flex-wrap justify-center gap-8 md:gap-16 px-6 font-bold text-lg md:text-2xl text-black">
+          {brands.map((b) => (
+            <span key={b}>{b}</span>
           ))}
         </div>
       </section>
 
-      <section className="w-full bg-white">
-        <div className="mx-auto w-full max-w-[1400px] px-6 py-6 sm:px-8 lg:px-12">
-          <div className="rounded-[2px] bg-[#f3f4f5] px-5 py-5 text-center">
-            <p className="text-[0.95rem] font-semibold leading-snug tracking-[-0.03em] text-zinc-900">
-              Grow innovation of students
-              <br />
-              everyday at Teamollo
-            </p>
-            <button
-              type="button"
-              className="mt-4 inline-flex items-center rounded-full bg-black px-4 py-2 text-[0.62rem] font-semibold uppercase tracking-[0.18em] text-white"
-            >
-              Offer now
-            </button>
-          </div>
-        </div>
-      </section>
-
-      <section className="relative w-full overflow-hidden bg-[#b9ff28] text-zinc-950">
-        <div className="absolute inset-x-0 bottom-0 h-16 bg-[linear-gradient(180deg,rgba(185,255,40,0),rgba(84,125,0,0.14))]" />
-        <div className="relative mx-auto flex w-full max-w-[1400px] items-start justify-between gap-4 px-6 py-8 sm:px-8 lg:px-12">
-          <div>
-            <p className="max-w-[9rem] text-[2rem] font-extrabold leading-[0.92] tracking-[-0.06em]">
-              Want to Start a Project?
-            </p>
-          </div>
-          <button
-            type="button"
-            aria-label="Open project contact"
-            className="mt-1 flex h-10 w-10 items-center justify-center rounded-full border border-black/15 bg-white/35"
-          >
-            <span className="flex w-4 flex-col gap-1">
-              <span className="h-px w-full bg-black" />
-              <span className="h-px w-full bg-black" />
-              <span className="h-px w-full bg-black" />
-            </span>
+      {/* 9. CTA Box */}
+      <section className="w-full bg-white py-16 px-6 lg:px-12 max-w-[1400px] mx-auto">
+        <div className="bg-[#f6f8fb] rounded-3xl p-10 lg:p-20 text-center flex flex-col items-center">
+          <h2 className="text-3xl lg:text-5xl font-bold text-black max-w-3xl leading-[1.2] mb-8">
+            I train thousands of Students everyday in YouTube
+          </h2>
+          <button className="bg-[#b5ed3d] text-black font-bold text-sm px-8 py-4 rounded-full uppercase tracking-wider">
+            Subscribe Now
           </button>
         </div>
       </section>
+
+      {/* 10. Ticker 2 (Dark) */}
+      <section className="w-full bg-[#0a0a0a] py-12 px-6">
+        <div className="max-w-[1400px] mx-auto flex flex-wrap justify-center md:justify-around gap-8 md:gap-16 font-bold text-xl md:text-3xl text-white">
+          {smallBrands.map((b) => (
+             <span key={b}>{b}</span>
+          ))}
+        </div>
+      </section>
+
+      {/* 11. Footer */}
+      <footer className="w-full bg-[#b9ff28] px-6 lg:px-12 py-16 lg:py-24 text-black">
+        <div className="max-w-[1400px] mx-auto flex flex-col md:flex-row justify-between mb-16 lg:mb-24">
+          <h2 className="text-6xl sm:text-8xl lg:text-[140px] font-bold leading-[0.9] tracking-tighter mb-10 md:mb-0">
+            Want to Start <br/> a Project?
+          </h2>
+          <div className="flex flex-col text-right text-sm font-semibold gap-3">
+             <a href="#" className="hover:underline">Instagram</a>
+             <a href="#" className="hover:underline">Behance</a>
+             <a href="#" className="hover:underline">Dribbble</a>
+             <a href="#" className="hover:underline">Twitter</a>
+             <a href="#" className="hover:underline">Linkedin</a>
+          </div>
+        </div>
+
+        <div className="max-w-[1400px] mx-auto flex flex-col md:flex-row items-center justify-between border-t border-black/30 pt-8">
+          <div className="flex items-center gap-6 w-full md:w-auto mb-8 md:mb-0">
+             <a href="#" className="flex items-center gap-3 bg-white px-6 py-3 rounded-full text-sm font-bold shadow-sm">
+               Let's Talk <span className="bg-[#b9ff28] w-6 h-6 rounded-full flex items-center justify-center">→</span>
+             </a>
+             <span className="text-3xl font-bold tracking-tight">Teamollo.</span>
+          </div>
+          
+          <div className="w-full md:w-auto flex flex-col items-center md:items-end">
+            <nav className="flex flex-wrap gap-6 text-sm font-semibold mb-6">
+               <a href="#">Home</a>
+               <a href="#">About</a>
+               <a href="#">Project</a>
+               <a href="#">Feedback</a>
+               <a href="#">Blog</a>
+               <a href="#">Contact</a>
+            </nav>
+            <p className="text-xs font-semibold text-black/60 text-center md:text-right">
+              © 2023 Teamollo. All rights reserved | Cookie Settings. Anti-Spam. Privacy. User agreement. Legal Notice and Responsible Disclosure
+            </p>
+          </div>
+        </div>
+      </footer>
+
     </main>
   );
 }
