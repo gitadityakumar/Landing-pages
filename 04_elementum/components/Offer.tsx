@@ -52,6 +52,7 @@ export default function Offer() {
                         src="https://images.unsplash.com/photo-1558591710-4b4a1ae0f04d?q=80&w=200&auto=format&fit=crop" 
                         alt="Design element" 
                         fill 
+                        sizes="64px"
                         className="object-cover"
                       />
                   </div>

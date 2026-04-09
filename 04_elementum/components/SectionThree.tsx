@@ -11,6 +11,7 @@ export default function SectionThree() {
             src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1000&auto=format&fit=crop"
             alt="Men working and eating salad"
             fill
+            sizes="(max-width: 768px) 100vw, 50vw"
             className="object-cover"
           />
         </div>

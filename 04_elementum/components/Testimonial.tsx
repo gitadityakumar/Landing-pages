@@ -17,7 +17,7 @@ export default function Testimonial() {
       <div className="absolute inset-0 max-w-7xl mx-auto pointer-events-none">
         {faces.map((f, i) => (
           <div key={i} className={`rounded-full overflow-hidden ${f.size} ${f.class}`}>
-            <Image src={f.src} alt={`Customer ${i}`} fill className="object-cover" />
+            <Image src={f.src} alt={`Customer ${i}`} fill sizes="200px" className="object-cover" />
           </div>
         ))}
       </div>

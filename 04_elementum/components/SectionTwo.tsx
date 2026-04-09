@@ -39,9 +39,10 @@ export default function SectionTwo() {
       <div className="flex-1 relative flex justify-end">
         <div className="relative w-[300px] h-[300px] md:w-[450px] md:h-[450px] rounded-full overflow-hidden shrink-0">
           <Image
-            src="https://images.unsplash.com/photo-1556761175-5973dc0f32d7?q=80&w=1000&auto=format&fit=crop"
+            src="https://images.unsplash.com/photo-1573164713988-8665fc963095?q=80&w=1000&auto=format&fit=crop"
             alt="Business team meeting"
             fill
+            sizes="(max-width: 768px) 100vw, 50vw"
             className="object-cover"
           />
         </div>
