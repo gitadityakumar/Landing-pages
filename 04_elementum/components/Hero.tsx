@@ -43,7 +43,7 @@ export default function Hero() {
       <div className="relative w-full max-w-5xl h-48 mt-24">
         {faces.map((f, i) => (
           <div key={i} className={`rounded-full overflow-hidden border-4 border-white shadow-xl ${f.size} ${f.class} group hover:z-20 transition-all hover:scale-110`}>
-            <Image src={f.src} alt={`Face ${i}`} fill sizes="100px" className="object-cover" />
+            <Image src={f.src} alt={`Face ${i}`} fill sizes="100px" priority className="object-cover" />
           </div>
         ))}
       </div>

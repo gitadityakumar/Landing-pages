@@ -43,6 +43,7 @@ export default function SectionTwo() {
             alt="Business team meeting"
             fill
             sizes="(max-width: 768px) 100vw, 50vw"
+            priority
             className="object-cover"
           />
         </div>
