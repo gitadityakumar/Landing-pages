@@ -1,36 +1,75 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Ardio – Digital Marketing Agency Landing Page
 
-## Getting Started
+A pixel-perfect landing page for **Ardio**, a fictional digital marketing agency. Built with Next.js 16, Tailwind CSS v4, and TypeScript.
 
-First, run the development server:
+![Ardio Landing Page Preview](public/preview.png)
+
+---
+
+## ✨ Features
+
+- **Responsive layout** – Desktop-first design that gracefully adapts to smaller screens
+- **Component-driven architecture** – 7 modular, reusable sections
+- **Custom typography** – Poppins, Prosto One, and Playfair Display via `next/font/google`
+- **Tailwind CSS v4** – Utility-first styling with inline theme tokens
+- **Decorative SVG assets** – Hand-crafted arch lines, ellipses, and swooping curves
+- **Optimised images** – Served through `next/image` with lazy loading and priority hints
+
+## 🧩 Sections
+
+| # | Section        | Description                                                |
+|---|----------------|------------------------------------------------------------|
+| 1 | **Navbar**     | Branded logo, navigation links, hamburger menu             |
+| 2 | **Hero**       | Gradient blob, headline, info columns, B&W photo, arch SVGs |
+| 3 | **Experience** | Service overview with description/work table               |
+| 4 | **Stats**      | Key metrics on a vibrant yellow accent strip               |
+| 5 | **Process**    | Decorated workspace photo with 2×2 feature grid            |
+| 6 | **Portfolio**  | Filterable project cards with mockup previews              |
+| 7 | **Footer**     | Subscribe form, social links, decorative arrow SVG         |
+
+## 🛠 Tech Stack
+
+- [Next.js 16](https://nextjs.org/) – React framework with App Router
+- [React 19](https://react.dev/)
+- [Tailwind CSS v4](https://tailwindcss.com/) – Utility-first CSS
+- [TypeScript](https://www.typescriptlang.org/)
+
+## 🚀 Getting Started
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+# Install dependencies
+bun install      # or npm install
+
+# Start the dev server
+bun dev          # or npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📁 Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+app/
+├── components/
+│   ├── Navbar.tsx
+│   ├── Hero.tsx
+│   ├── Experience.tsx
+│   ├── Stats.tsx
+│   ├── Process.tsx
+│   ├── Portfolio.tsx
+│   └── Footer.tsx
+├── globals.css
+├── layout.tsx
+└── page.tsx
+public/
+├── heroimg.png
+├── feature.png
+├── service.png / service1.png / service2.png
+├── Ellipse.svg / hero1.svg / hero2.svg
+├── bottomline.svg / footer1.svg / footer2.svg
+└── preview.png
+```
 
-## Learn More
+## 📄 License
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+This project is for educational and portfolio purposes.
