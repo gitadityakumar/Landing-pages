@@ -8,19 +8,27 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-poppins:var(--font-poppins);
-  --font-prosto-one:var(--font-prosto-one);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-brand: #E84D26;
+  --color-brand-light: #FF6B47;
+  --color-accent-yellow: #FFD233;
+  --color-accent-purple: #8B5CF6;
+  --font-poppins: var(--font-poppins);
+  --font-prosto-one: var(--font-prosto-one);
+  --font-playfair: var(--font-playfair);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-poppins), sans-serif;
+  overflow-x: hidden;
+}
+
+/* Scrollbar hide utility */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
