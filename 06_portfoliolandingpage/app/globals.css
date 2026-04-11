@@ -8,6 +8,11 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-primary: #f6dd7a;
+    /* warm yellow from design */
+    --color-muted: #f3f4f6;
+    /* light gray sections */
+    --color-text: #0c0c0c;
   --font-prompt: var(--font-prompt);
 }
 
@@ -21,5 +26,6 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-prompt), ui-sans-serif, system-ui, -apple-system,
+      Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
 }
