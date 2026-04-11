@@ -97,6 +97,7 @@ export default function Home() {
                   alt="hero"
                   fill
                   className="object-cover object-center"
+                  sizes="(min-width: 768px) 24rem, 18rem"
                   priority
                 />
               </div>
@@ -115,6 +116,7 @@ export default function Home() {
                 alt="welcome"
                 width={120}
                 height={120}
+                style={{ height: "auto" }}
               />
               <div>
                 <h3 className="text-lg font-semibold text-black">Welcome</h3>
@@ -148,6 +150,7 @@ export default function Home() {
                         alt="icon"
                         width={20}
                         height={20}
+                        style={{ height: "auto" }}
                       />
                     </div>
                     <div className="mt-2 font-medium">{item.label}</div>
@@ -186,7 +189,13 @@ export default function Home() {
             </div>
           </div>
           <div className="flex justify-center">
-            <Image src="/hiw2.png" alt="phone" width={280} height={560} />
+            <Image
+              src="/hiw2.png"
+              alt="phone"
+              width={280}
+              height={560}
+              style={{ height: "auto" }}
+            />
           </div>
         </div>
       </section>
@@ -201,6 +210,7 @@ export default function Home() {
                 alt="person"
                 fill
                 className="object-cover"
+                sizes="(min-width: 768px) 18rem, 16rem"
               />
             </div>
           </div>
@@ -244,6 +254,7 @@ export default function Home() {
                 alt="person 2"
                 fill
                 className="object-cover"
+                sizes="(min-width: 768px) 18rem, 16rem"
               />
             </div>
           </div>
