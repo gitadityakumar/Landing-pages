@@ -1,36 +1,101 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+## Portfolio Landing Page — Next.js 16 + Tailwind v4
+
+A responsive portfolio/agency landing page implemented with the App Router in Next.js 16 and Tailwind CSS v4. The layout matches the provided design mock, including a split hero, service cards, circular imagery, pricing, a two-column numbered FAQ, and a simple footer.
+
+### Preview
+
+![Landing Page Preview](public/preview.png)
+
+---
+
+## Features
+
+- Responsive layout across mobile, tablet, and desktop
+- Clean semantic structure using the App Router (`app/`)
+- Tailwind CSS v4 theme tokens for colors and typography
+- Optimized images via `next/image`
+- Accessible focusable buttons and clear content hierarchy
+- Zero console errors in development
+
+## Tech Stack
+
+- Next.js 16 (App Router, Turbopack dev)
+- React 19
+- Tailwind CSS v4
+- TypeScript
+
+## Project Structure
+
+```
+06_portfoliolandingpage/
+├─ app/
+│  ├─ layout.tsx        # Root layout and font wiring
+│  ├─ page.tsx          # Landing page sections
+│  └─ globals.css       # Tailwind v4 theme + base styles
+├─ public/
+│  ├─ preview.png       # Auto-generated screenshot of the page
+│  └─ assets...         # Images & icons used by the page
+├─ next.config.ts
+├─ tsconfig.json
+├─ eslint.config.mjs
+├─ postcss.config.mjs
+└─ README.md
+```
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+
+- Node.js 20+ recommended
+- Package manager: Bun, npm, pnpm, or Yarn
+
+### Install
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+# using Bun (recommended for speed)
+
+
+# or with npm
+npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Run (development)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+bun run dev
+# or
+npm run dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+The app runs at http://localhost:3000
 
-## Learn More
+### Build and Start (production)
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+# build
+npm run build
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+# start after build
+npm run start
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Scripts
 
-## Deploy on Vercel
+- `dev`   — start Next.js in development (Turbopack)
+- `build` — create an optimized production build
+- `start` — run the production server
+- `lint`  — run ESLint
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Customization
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Update copy and section content in `app/page.tsx`.
+- Adjust theme colors and fonts in `app/globals.css` under `@theme inline`.
+- Public assets live under `public/`.
+
+## Notes
+
+This repository uses the current Next.js 16 conventions. Some APIs have changed from earlier versions; refer to Next.js docs when adding routes or server components.
+
+## License
+
+This repository does not declare a license. Treat usage according to your organization’s policies or add a LICENSE file if needed.
