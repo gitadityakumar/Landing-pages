@@ -26,7 +26,9 @@ export default function Home() {
 
       {/* Hero */}
       <section className="w-full bg-primary">
-        <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-8 px-6 py-12 md:grid-cols-2 md:py-16 lg:py-20">
+        <div className="relative mx-auto grid max-w-7xl grid-cols-1 items-center gap-8 px-6 py-12 md:grid-cols-2 md:py-16 lg:py-20">
+          {/* vertical divider to match design */}
+          <div className="pointer-events-none absolute inset-y-0 left-1/2 hidden w-px -translate-x-1/2 bg-white/40 md:block" />
           <div className="max-w-xl">
             <h1 className="text-4xl font-bold leading-tight text-black md:text-5xl">
               We Build
@@ -116,7 +118,7 @@ export default function Home() {
                 alt="welcome"
                 width={120}
                 height={120}
-                style={{ height: "auto" }}
+                style={{ width: "auto", height: "auto" }}
               />
               <div>
                 <h3 className="text-lg font-semibold text-black">Welcome</h3>
@@ -150,7 +152,7 @@ export default function Home() {
                         alt="icon"
                         width={20}
                         height={20}
-                        style={{ height: "auto" }}
+                        style={{ width: "auto", height: "auto" }}
                       />
                     </div>
                     <div className="mt-2 font-medium">{item.label}</div>
@@ -194,7 +196,7 @@ export default function Home() {
               alt="phone"
               width={280}
               height={560}
-              style={{ height: "auto" }}
+              style={{ width: "auto", height: "auto" }}
             />
           </div>
         </div>
@@ -314,21 +316,29 @@ export default function Home() {
             The purpose of a FAQ is generally to provide information on frequent
             questions or concerns
           </p>
-          <div className="mt-6 grid grid-cols-1 gap-4 md:grid-cols-2">
+          {/* two-column numbered rows to mirror design */}
+          <div className="mt-8 grid grid-cols-1 gap-3 md:grid-cols-2">
             {[
-              "Can you design My website",
-              "Can you design My website",
-              "Can you design My website",
-              "Can you design My website",
-              "Can you design My website",
-              "Can you design My website",
-            ].map((q, idx) => (
+              { n: "01", q: "Can you design My website" },
+              { n: "02", q: "Can you design My website" },
+              { n: "03", q: "Can you design My website" },
+              { n: "04", q: "Can you design My website" },
+              { n: "05", q: "Can you design My website" },
+              { n: "06", q: "Can you design My website" },
+            ].map((item) => (
               <div
-                key={idx}
-                className="flex items-center justify-between rounded-md bg-white/50 px-4 py-3 text-sm"
+                key={item.n}
+                className="flex items-center justify-between rounded-md border border-black/10 bg-primary/60 px-3 py-2 text-xs md:text-sm"
               >
-                <span className="text-black">{q}</span>
-                <span className="text-black/60">▸</span>
+                <div className="flex items-center gap-3">
+                  <span className="text-[10px] font-medium text-black/70 md:text-xs">
+                    {item.n}
+                  </span>
+                  <span className="text-black">{item.q}</span>
+                </div>
+                <span className="grid h-5 w-5 place-items-center rounded-full border border-black/20 text-[10px] text-black/60">
+                  ▸
+                </span>
               </div>
             ))}
           </div>

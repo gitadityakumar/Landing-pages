@@ -1,0 +1,17 @@
+# Monorepo ignores
+**/node_modules/
+**/.next/
+**/.turbo/
+**/dist/
+**/build/
+
+# Editor/OS
+.DS_Store
+*.log
+
+# Playwright MCP artifacts
+**/.playwright-mcp/
+
+# Env files
+*.env
+*.env.*
