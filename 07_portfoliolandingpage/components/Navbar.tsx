@@ -2,20 +2,26 @@ import Link from "next/link";
 
 export default function Navbar() {
   return (
-    <header className="sticky top-0 z-50 backdrop-blur supports-backdrop-filter:bg-white/70 bg-white/90 border-b border-black/5">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-        <div className="flex items-center gap-3">
-          <div className="h-8 w-8 rounded-full bg-emerald-500" />
-          <span className="font-semibold tracking-tight" style={{fontFamily:"var(--font-prompt)"}}>SPRING</span>
+    <header className="bg-[#7cebc2] border-b border-black">
+      <div className="mx-auto px-4 sm:px-6 lg:px-12 h-20 flex items-center justify-between">
+        <div className="flex items-center h-full">
+          <span className="font-semibold tracking-widest text-lg text-black pr-8 uppercase" style={{fontFamily:"var(--font-prompt)"}}>SPRING</span>
+          <div className="w-[1px] h-full bg-black" />
         </div>
-        <nav className="hidden md:flex items-center gap-6 text-sm text-gray-600">
-          <Link href="#services" className="hover:text-gray-900">Services</Link>
-          <Link href="#work" className="hover:text-gray-900">Work</Link>
-          <Link href="#team" className="hover:text-gray-900">Team</Link>
-          <Link href="#pricing" className="hover:text-gray-900">Pricing</Link>
-          <Link href="#faq" className="hover:text-gray-900">FAQ</Link>
+        
+        <nav className="hidden md:flex items-center gap-10 text-sm text-black font-medium tracking-wide uppercase" style={{fontFamily:"var(--font-prompt)"}}>
+          <Link href="#" className="hover:text-gray-700">HOME</Link>
+          <Link href="#contact" className="hover:text-gray-700">CONTACT</Link>
+          <Link href="#" className="hover:text-gray-700">BLOG</Link>
+          <Link href="#" className="hover:text-gray-700">SUPPORT</Link>
+          <Link href="#" className="hover:text-gray-700">ABOUT</Link>
         </nav>
-        <Link href="#contact" className="inline-flex items-center rounded-md bg-emerald-500 px-4 py-2 text-white text-sm font-medium hover:bg-emerald-600 transition">Get Start</Link>
+        
+        <div className="flex items-center h-full border-l border-black pl-8">
+          <Link href="#contact" className="inline-flex items-center bg-[#5478f6] border border-black text-white px-8 py-2 text-sm font-medium hover:bg-blue-600 transition shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+            Get Start
+          </Link>
+        </div>
       </div>
     </header>
   );
