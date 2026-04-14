@@ -29,7 +29,7 @@ A modern, responsive landing page for **VerbalizeIt**, a language learning appli
 
 ## Tech Stack
 
-- **Framework:** [Next.js 15](https://nextjs.org/) (App Router)
+- **Framework:** [Next.js 16](https://nextjs.org/) (App Router)
 - **Styling:** [Tailwind CSS 4](https://tailwindcss.com/)
 - **Language:** TypeScript
 - **Font:** [Raleway](https://fonts.google.com/specimen/Raleway) (Google Fonts)
@@ -94,7 +94,7 @@ bun start
 └── package.json
 ```
 
-##  Design Highlights
+## Design Highlights
 
 - **Color Palette:** White backgrounds with `#fdc630` (golden yellow) as the primary accent
 - **Typography:** Raleway font family across all weights (100–900)
