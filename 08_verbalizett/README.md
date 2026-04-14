@@ -1,12 +1,12 @@
 # VerbalizeIt — Language Learning Landing Page
 
-A modern, responsive landing page for **VerbalizeIt**, a language learning application. Built with Next.js 15, Tailwind CSS 4, and TypeScript.
+A modern, responsive landing page for **VerbalizeIt**, a language learning application. Built with Next.js 16, Tailwind CSS 4, and TypeScript.
 
 ![VerbalizeIt Landing Page Preview](public/preview.png)
 
 ---
 
-## ✨ Features
+## Features
 
 - **Responsive Design** — Fully optimized for desktop, tablet, and mobile screens
 - **Modern UI** — Clean, minimal aesthetic with a warm yellow accent palette
@@ -16,7 +16,7 @@ A modern, responsive landing page for **VerbalizeIt**, a language learning appli
 - **Download CTA** — Prominent call-to-action banner with App Store & Google Play buttons
 - **Brand Marquee** — Trusted-by logos (VISA, Spotify, LinkedIn, Zoom)
 
-## 🧱 Sections
+## Sections
 
 | Section | Description |
 | --- | --- |
@@ -27,7 +27,7 @@ A modern, responsive landing page for **VerbalizeIt**, a language learning appli
 | **Download CTA** | Yellow banner with App Store & Google Play download buttons |
 | **Footer** | Brand info, product/company/legal links, social icons, language selector |
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 - **Framework:** [Next.js 15](https://nextjs.org/) (App Router)
 - **Styling:** [Tailwind CSS 4](https://tailwindcss.com/)
@@ -36,7 +36,7 @@ A modern, responsive landing page for **VerbalizeIt**, a language learning appli
 - **Icons:** [Lucide React](https://lucide.dev/)
 - **Package Manager:** [Bun](https://bun.sh/)
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 
@@ -69,7 +69,7 @@ bun run build
 bun start
 ```
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 08_verbalizett/
@@ -94,17 +94,15 @@ bun start
 └── package.json
 ```
 
-## 🎨 Design Highlights
+##  Design Highlights
 
 - **Color Palette:** White backgrounds with `#fdc630` (golden yellow) as the primary accent
 - **Typography:** Raleway font family across all weights (100–900)
 - **Cards:** Warm cream (`#fef9e7`) feature cards with embedded phone mockups
 - **Phone Mockups:** Built entirely with CSS — rounded corners, black bezels, status bars, and interactive UI elements
 
-## 📄 License
+## License
 
 This project is open source and available under the [MIT License](LICENSE).
 
 ---
-
-Built with ❤️ by [Aditya Kumar](https://github.com/gitadityakumar)
