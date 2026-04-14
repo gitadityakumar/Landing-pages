@@ -7,9 +7,12 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col">
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8 mb-16">
           <div className="col-span-2 lg:col-span-2 flex flex-col items-start pr-8">
-            <Link href="/" className="text-2xl font-bold tracking-tight text-slate-900 flex items-center gap-1 mb-6">
-              <div className="w-6 h-6 bg-blue-600 rounded-bl-lg rounded-tr-lg"></div>
-              VERBALIZEIT
+            <Link href="/" className="text-2xl font-bold tracking-tight text-slate-900 flex items-center gap-2 mb-6">
+              <div className="relative w-8 h-8 flex items-center justify-center">
+                 <div className="absolute top-0 right-0 w-6 h-6 bg-[#2dc071] rounded-full"></div>
+                 <div className="absolute bottom-0 left-0 w-6 h-6 bg-[#3b82f6] rounded-full opacity-90 rounded-br-none"></div>
+              </div>
+              <span className="font-semibold tracking-normal text-xl text-slate-900">Verbalize<span className="font-light">It</span></span>
             </Link>
             <p className="text-slate-500 mb-6 max-w-sm leading-relaxed">
               Human-powered translation for your Business. Connect with a global network of professional translators instantly.
