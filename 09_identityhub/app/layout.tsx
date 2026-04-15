@@ -1,26 +1,24 @@
 import type { Metadata } from "next";
-import {  Sora } from "next/font/google";
+import { Sora } from "next/font/google";
 import "./globals.css";
-import Aeonik from "next/font/local"
+import localFont from "next/font/local";
 
 const sora = Sora({
-  variable:"--font-sora",
-  subsets:["latin"],
-  weight:["100","200","300","400","500","600","700","800"]
-})
+  variable: "--font-sora",
+  subsets: ["latin"],
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800"],
+});
 
-
-const aeonik = Aeonik({
+const aeonik = localFont({
   variable: "--font-aeonik",
   src: [
     {
-      path: "../public/fonts/aeonik-regular.ttf",
+      path: "../fonts/Aeonik Regular.woff2",
       weight: "400",
+      style: "normal",
     },
   ],
-})
-
-
+});
 
 export const metadata: Metadata = {
   title: "Identityhub",
