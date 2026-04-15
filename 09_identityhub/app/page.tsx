@@ -7,13 +7,15 @@ import WhyChooseUs from "@/components/whychooseus";
 
 export default function Home() {
   return (
- <div className="max-w-7xl w-full h-screen flex-1 mx-auto pl-6 pr-6 bg-id-bg">
-  <Hero/>
-  <Service/>
-  <WhyChooseUs/>
-  <Pricing/>
-  <Testimonials/>
-  <CtaFooter/>
- </div>
+    <div className="flex-1">
+      <Hero />
+      <div className="mx-auto max-w-7xl px-6">
+        <Service />
+        <WhyChooseUs />
+        <Pricing />
+        <Testimonials />
+        <CtaFooter />
+      </div>
+    </div>
   );
 }
