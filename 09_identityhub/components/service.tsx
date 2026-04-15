@@ -72,24 +72,40 @@ function CardIcon({ type }: { type: ServiceCard["icon"] }) {
 function ServiceItem({ title, description, icon }: ServiceCard) {
   return (
     <article className="relative">
-      <div className="pointer-events-none absolute inset-x-[14%] inset-y-[8%] -z-10 rounded-full bg-[radial-gradient(circle,rgba(222,189,255,0.9),rgba(160,118,255,0.42)_40%,rgba(0,0,0,0)_72%)] blur-[26px] opacity-90" />
-      <div className="rounded-3xl border border-[#3322a6] bg-[radial-gradient(circle_at_60%_48%,rgba(78,52,203,0.35),rgba(16,12,30,0.98)_58%,rgba(10,8,18,1)_100%)] px-7 py-7 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.02)]">
-        <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[linear-gradient(180deg,#7c2cff_0%,#4c11d2_100%)] shadow-[0_10px_30px_rgba(109,47,255,0.38)]">
-          <CardIcon type={icon} />
+      <div className="pointer-events-none absolute inset-x-[18%] inset-y-[16%] -z-10 rounded-full bg-[radial-gradient(circle,rgba(139,94,255,0.48),rgba(93,48,198,0.22)_42%,rgba(0,0,0,0)_74%)] blur-[32px]" />
+      <div
+        className="rounded-[28px] bg-[linear-gradient(135deg,#233dff_0%,#6e3df4_35%,#c33dac_68%,#ff5ea8_100%)] p-px shadow-[0_0_0_1px_rgba(255,255,255,0.02)]"
+        style={{
+          clipPath:
+            "polygon(0 0, calc(100% - 34px) 0, 100% 34px, 100% 100%, 0 100%)",
+        }}
+      >
+        <div
+          className="relative overflow-hidden bg-[radial-gradient(circle_at_58%_38%,rgba(96,69,255,0.24),rgba(25,18,44,0.96)_52%,rgba(12,10,21,1)_100%)] px-5 py-5 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.02)]"
+          style={{
+            clipPath:
+              "polygon(0 0, calc(100% - 34px) 0, 100% 34px, 100% 100%, 0 100%)",
+            borderRadius: "28px",
+          }}
+        >
+          <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_65%_30%,rgba(137,95,255,0.18),rgba(137,95,255,0)_48%)]" />
+          <div className="relative flex h-9 w-9 items-center justify-center rounded-xl bg-[linear-gradient(180deg,#7b30ff_0%,#5318dc_100%)] shadow-[0_10px_24px_rgba(103,48,255,0.34)]">
+            <CardIcon type={icon} />
+          </div>
+
+          <h3 className="relative mt-5 max-w-[220px] whitespace-pre-line font-sora text-[20px] font-medium leading-[1.1] tracking-[-0.03em] text-[#d8d6e7]">
+            {title}
+          </h3>
+
+          <p className="relative mt-3 max-w-[238px] text-[14px] leading-[1.45] text-[#c7c1d7]">
+            {description}
+          </p>
+
+          <button className="relative mt-5 inline-flex items-center gap-2 text-[15px] font-medium text-[#efedf7]">
+            <span>Explore More</span>
+            <span className="text-[14px] text-white">▶</span>
+          </button>
         </div>
-
-        <h3 className="mt-7 whitespace-pre-line font-sora text-[28px] font-medium leading-[1.18] tracking-[-0.03em] text-[#d8d6e7]">
-          {title}
-        </h3>
-
-        <p className="mt-5 max-w-[320px] text-[18px] leading-[1.45] text-[#b9b4cb]">
-          {description}
-        </p>
-
-        <button className="mt-9 inline-flex items-center gap-3 text-[18px] font-medium text-[#efedf7]">
-          <span>Explore More</span>
-          <span className="text-[18px] text-white">▶</span>
-        </button>
       </div>
     </article>
   );
@@ -97,7 +113,7 @@ function ServiceItem({ title, description, icon }: ServiceCard) {
 
 export default function Service() {
   return (
-    <section id="services" className="relative py-24 md:py-28">
+    <section id="services" className="relative py-16 md:py-20">
       <div className="mx-auto max-w-7xl">
         <div className="mx-auto max-w-190 text-center">
           <div className="mx-auto inline-flex rounded-[28px] border border-[#c58fff]/60 bg-[linear-gradient(180deg,rgba(198,136,255,0.48),rgba(126,77,226,0.22))] px-6 py-3 shadow-[0_12px_32px_rgba(179,106,255,0.3),inset_0_0_12px_rgba(255,255,255,0.16)] backdrop-blur-[10px]">
@@ -106,7 +122,7 @@ export default function Service() {
             </span>
           </div>
 
-          <h2 className="mt-8 font-sora text-[42px] font-semibold leading-[1.04] tracking-[-0.04em] text-[#d9d6e9] md:text-[54px]">
+          <h2 className="mt-6 font-sora text-[36px] font-semibold leading-[1.04] tracking-[-0.04em] text-[#d9d6e9] md:text-[48px]">
             See our services for
             <br />
             secure your{" "}
@@ -115,13 +131,13 @@ export default function Service() {
             </span>
           </h2>
 
-          <p className="mx-auto mt-7 max-w-190 text-[24px] leading-[1.35] text-[#c7c1d7]">
+          <p className="mx-auto mt-5 max-w-160 text-[18px] leading-[1.35] text-[#c7c1d7]">
             Make your data invisible by generating unlimited identities. The
             next-level in privacy protection for online and travel.
           </p>
         </div>
 
-        <div className="mt-14 grid gap-6 lg:grid-cols-3">
+        <div className="mt-10 grid gap-4 lg:grid-cols-3">
           {cards.map((card) => (
             <ServiceItem key={card.title} {...card} />
           ))}

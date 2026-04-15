@@ -38,52 +38,52 @@ function SocialIcon({ type }: { type: "twitter" | "instagram" | "telegram" | "fa
 
 export default function CtaFooter() {
   return (
-    <section className="overflow-hidden pt-20">
-      <div className="mx-auto max-w-375">
-        <div className="relative mx-auto flex min-h-155 max-w-215 items-center justify-center px-6 text-center">
-          <div className="absolute inset-0 rounded-[120px] bg-[radial-gradient(circle_at_50%_18%,rgba(248,78,197,0.46),rgba(91,120,255,0.34)_38%,rgba(19,184,233,0.34)_66%,rgba(0,0,0,0)_92%)] blur-[42px]" />
-          <div className="absolute inset-[6%_7%_2%_7%] rounded-[110px] bg-[radial-gradient(circle_at_50%_14%,rgba(245,77,186,0.62),rgba(85,122,255,0.28)_42%,rgba(26,176,224,0.36)_68%,rgba(0,0,0,0)_90%)] opacity-90 blur-[20px]" />
+    <section className="overflow-hidden pt-16 md:pt-18">
+      <div className="mx-auto max-w-360">
+        <div className="relative mx-auto flex min-h-120 max-w-205 items-center justify-center px-6 text-center md:min-h-126">
+          <div className="absolute left-1/2 top-[17%] h-[360px] w-[420px] -translate-x-1/2 rounded-[120px] bg-[radial-gradient(circle_at_50%_18%,rgba(232,73,176,0.24),rgba(84,105,255,0.18)_40%,rgba(0,0,0,0)_76%)] blur-[48px]" />
+          <div className="absolute left-1/2 top-[36%] h-[320px] w-[360px] -translate-x-1/2 rounded-[120px] bg-[radial-gradient(circle_at_36%_80%,rgba(25,164,229,0.22),rgba(0,0,0,0)_66%)] blur-[54px]" />
 
-          {[220, 320, 420, 520].map((size) => (
+          {[165, 235, 305, 375].map((size) => (
             <div
               key={size}
-              className="pointer-events-none absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full border border-white/14"
+              className="pointer-events-none absolute left-1/2 top-[42%] -translate-x-1/2 -translate-y-1/2 rounded-full border border-white/8"
               style={{ width: size, height: size }}
             />
           ))}
 
-          <div className="relative z-10 max-w-190">
-            <h2 className="font-sora text-[54px] font-semibold leading-[1.03] tracking-[-0.05em] text-white md:text-[64px]">
+          <div className="relative z-10 max-w-135">
+            <h2 className="font-sora text-[34px] font-semibold leading-[1.04] tracking-[-0.05em] text-white md:text-[40px]">
               Be part of the future of
               <br />
               IdentityHub
             </h2>
 
-            <div className="mx-auto mt-3 h-2.5 w-60">
-              <div className="h-1.25 rounded-full bg-[linear-gradient(90deg,#5030ff_0%,#e147d6_100%)]" />
+            <div className="mx-auto mt-2 h-2 w-34">
+              <div className="h-1 rounded-full bg-[linear-gradient(90deg,#4f49ff_0%,#e044cf_100%)]" />
             </div>
 
-            <p className="mx-auto mt-6 max-w-175 text-[20px] leading-[1.45] text-[#e1d9eb]">
+            <p className="mx-auto mt-3 max-w-120 text-[13px] leading-[1.45] text-[#d7d0e3]">
               Unleash the power of AI within Brainwave. Upgrade your
               productivity with Brainwave, the open AI chat app.
             </p>
 
-            <button className="mt-8 rounded-xl border border-[#e07ef5]/35 bg-[linear-gradient(90deg,#4f35ff_0%,#e243d1_100%)] px-8 py-4 text-[18px] font-medium text-white shadow-[0_18px_40px_rgba(133,75,255,0.28)] transition hover:brightness-110">
-              Start free trail
+            <button className="mt-5 rounded-[10px] border border-[#d86ef0]/30 bg-[linear-gradient(90deg,#4d46ff_0%,#ef47c5_100%)] px-5 py-2.5 text-[12px] font-medium text-white shadow-[0_12px_24px_rgba(133,75,255,0.2)] transition hover:brightness-110">
+              Start free trial
             </button>
           </div>
         </div>
 
-        <footer className="mt-2 border-t border-white/20 px-2 pb-8 pt-6 md:px-0">
-          <div className="flex flex-col gap-8 md:flex-row md:items-center md:justify-between">
+        <footer className="mt-4 border-t border-white/8 px-2 pb-4 pt-5 md:px-0">
+          <div className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
             <div className="flex items-center gap-3">
               <Image src="/logo.svg" alt="IdentityHub logo" width={28} height={28} />
-              <span className="font-mono text-[24px] font-bold tracking-[-0.03em] text-[#d8d4e7]">
+              <span className="font-mono text-[22px] font-bold tracking-[-0.03em] text-[#d8d4e7]">
                 IdentityHub
               </span>
             </div>
 
-            <nav className="flex flex-wrap items-center gap-10 text-[12px] font-semibold tracking-[0.08em] text-[#d9d5e6]">
+            <nav className="flex flex-wrap items-center gap-8 text-[10px] font-semibold tracking-[0.08em] text-[#bdb6cd]">
               {footerLinks.map((link) => (
                 <a
                   key={link}
@@ -96,17 +96,17 @@ export default function CtaFooter() {
             </nav>
           </div>
 
-          <div className="mt-7 flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
-            <p className="text-[16px] text-[#d3cfdf]">
+          <div className="mt-4 flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
+            <p className="text-[11px] text-[#a8a2b8]">
               © identityhub 2024. All rights reserved
             </p>
 
-            <div className="flex items-center gap-5">
+            <div className="flex items-center gap-4">
               {(["twitter", "instagram", "telegram", "facebook"] as const).map((icon) => (
                 <button
                   key={icon}
                   aria-label={icon}
-                  className="flex h-11 w-11 items-center justify-center rounded-full bg-[#21193a] text-white transition hover:bg-[#30225d]"
+                  className="flex h-8 w-8 items-center justify-center rounded-full bg-[#2c2440] text-white transition hover:bg-[#3a2f58]"
                 >
                   <SocialIcon type={icon} />
                 </button>
