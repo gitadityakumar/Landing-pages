@@ -1,6 +1,7 @@
 import AudiencesSection from "@/components/audiences-section";
 import HeroSection from "@/components/hero-section";
 import ResultsSection from "@/components/results-section";
+import TestimonialsSection from "@/components/testimonials-section";
 
 export default function Home() {
   return (
@@ -8,6 +9,7 @@ export default function Home() {
       <HeroSection />
       <ResultsSection />
       <AudiencesSection />
+      <TestimonialsSection />
     </main>
   );
 }
