@@ -1,3 +1,4 @@
+import AudiencesSection from "@/components/audiences-section";
 import HeroSection from "@/components/hero-section";
 import ResultsSection from "@/components/results-section";
 
@@ -6,6 +7,7 @@ export default function Home() {
     <main className="page-shell">
       <HeroSection />
       <ResultsSection />
+      <AudiencesSection />
     </main>
   );
 }
