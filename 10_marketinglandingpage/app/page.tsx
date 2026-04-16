@@ -1,8 +1,9 @@
+import HeroSection from "@/components/hero-section";
 
 export default function Home() {
-  return(
-    <>
-    <div></div>
-    </>
+  return (
+    <main className="page-shell">
+      <HeroSection />
+    </main>
   );
 }
