@@ -39,7 +39,7 @@ export default function TestimonialsSection() {
 
           <Image
             alt="Canopy product scene"
-            className="h-full w-full object-cover"
+            className="w-full object-cover lg:h-full lg:w-auto"
             height={350}
             src="/design-assets/street-testimonial.jpg"
             width={332}

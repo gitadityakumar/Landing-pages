@@ -66,7 +66,7 @@ export default function AudiencesSection() {
         <div className="mt-20 grid gap-16 lg:grid-cols-[569px_1fr] lg:items-center">
           <Image
             alt="Megaphone customer creative"
-            className="rounded-xl object-cover"
+            className="h-auto rounded-xl object-cover"
             height={408}
             src="/design-assets/megaphone.jpg"
             width={569}
