@@ -1,4 +1,5 @@
 import Hero from "@/components/hero-section";
+import Meetings from "@/components/superpowered-meetings";
 
 export default function Home() {
   return (
@@ -10,10 +11,11 @@ export default function Home() {
       />
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute inset-x-0 top-0 h-[460px] bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.9),rgba(255,255,255,0.45)_40%,transparent_75%)]"
+        className="pointer-events-none absolute inset-x-0 top-0 h-115 bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.9),rgba(255,255,255,0.45)_40%,transparent_75%)]"
       />
-      <div className="relative mx-auto w-full max-w-[1440px]">
+      <div className="relative mx-auto w-full max-w-360">
         <Hero />
+        <Meetings/>
       </div>
     </main>
   );
