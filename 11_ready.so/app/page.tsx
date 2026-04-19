@@ -1,4 +1,5 @@
 import Hero from "@/components/hero-section";
+import Upgrade from "@/components/meeting-upgrade";
 import Meetings from "@/components/superpowered-meetings";
 
 export default function Home() {
@@ -16,6 +17,7 @@ export default function Home() {
       <div className="relative mx-auto w-full max-w-360">
         <Hero />
         <Meetings/>
+        <Upgrade />
       </div>
     </main>
   );
