@@ -3,6 +3,7 @@ import Upgrade from "@/components/meeting-upgrade";
 import Meetings from "@/components/superpowered-meetings";
 import Ready from "@/components/feeling-ready";
 import AllInCalendar from "@/components/all-in-calendar";
+import FinalCta from "@/components/final-cta";
 
 export default function Home() {
   return (
@@ -22,6 +23,7 @@ export default function Home() {
         <Upgrade />
         <Ready />
         <AllInCalendar />
+        <FinalCta />
       </div>
     </main>
   );
