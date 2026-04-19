@@ -1,6 +1,7 @@
 import Hero from "@/components/hero-section";
 import Upgrade from "@/components/meeting-upgrade";
 import Meetings from "@/components/superpowered-meetings";
+import Ready from "@/components/feeling-ready";
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
         <Hero />
         <Meetings/>
         <Upgrade />
+        <Ready />
       </div>
     </main>
   );
